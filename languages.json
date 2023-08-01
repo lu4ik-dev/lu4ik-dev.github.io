@@ -1,18 +1,10 @@
   {
   "russian": {
     "greet": "Привет",
-    "complectName": "Имя фамилия"
+    "complectName": "Дмитрий Смирнов"
   },
   "english": {
     "greet": "hi",
-    "complectName": "name surname"
-  },
-  "spanish": {
-    "greet": "¡Hola!",
-    "complectName": "nombre apellido"
-  },
-  "french": {
-    "greet": "Bonjour",
-    "complectName": "nom prénom"
+    "complectName": "Dmitriy Surname"
   }
 }
