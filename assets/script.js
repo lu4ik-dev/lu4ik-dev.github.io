@@ -1,40 +1,5 @@
-var prevScrollY = 0;
-const scrollLine = document.querySelector('.scroll-line');
-let stageScroll = 0;
 
 
-
-function scrollStage() {
-  const currentScrollY = document.body.scrollTop || document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = (currentScrollY / height) * 100;
-  const scrollDirection = currentScrollY > prevScrollY ? `down ${scrolled}` : `up ${scrolled}`;
-  console.log(`Scroll Direction: ${scrollDirection}; prev Scroll Y ${prevScrollY}`);
-  prevScrollY = currentScrollY;
-
-  let pageScrolling = 0;
-/*
-  if (scrolled >= 60) {
-    pageScrolling = 100;
-  } else if (scrolled >= 10) {
-    pageScrolling = 48;
-  }
-
-  if (scrolled <= 40) {
-    pageScrolling = 0;
-  } else if (scrolled <= 90) {
-    pageScrolling = 48;
-  }
-*/
-  scrollLine.style.transform = `translateY(${55+scrolled}px)`;
-
-}
-
-document.addEventListener('scroll', scrollStage);
-
-
-
-    // Update the previous scroll position for the next comparison
 
 
 
@@ -54,25 +19,34 @@ async function fetchAndParseJSON(url) {
   
 
   
+function spanTitles(text, element){
+  for (const char of text) {
+    const spanElement = document.createElement('span');
+    spanElement.textContent = char === ' ' ? ' ' : char;
+    element.appendChild(spanElement);
+    }
+}
+
 
 function changeLanguage(lang){
- const complectNameElement = document.getElementById('complectName');
- complectNameElement.textContent = '';
+  const complectNameElement = document.getElementById('complectName');
+  const skillsTitleElement = document.getElementById('skills-title');
+
+  skillsTitleElement.textContent = '';
+  complectNameElement.textContent = '';
     if (complectNameElement) {
     fetchAndParseJSON(jsonUrl)
         .then(data => {
         if (data) {
             console.log(data);
             complectNameText = data[lang]['complectName'];
-        }
-        for (const char of complectNameText) {
-            const spanElement = document.createElement('span');
-            spanElement.textContent = char === ' ' ? ' ' : char;
-            complectNameElement.appendChild(spanElement);
-            }
-
+            skillsTitleText = data[lang]['skills-title'];
+            spanTitles(complectNameText, complectNameElement);
+            spanTitles(skillsTitleText, skillsTitleElement);
             document.getElementById("modal-dialog-change-languageLabel").innerHTML = data[lang]['select-lang'];
             document.getElementById("btn-contact").innerHTML = data[lang]['btn-contact'];
+        }
+
         });
     }
     
@@ -95,6 +69,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const mySwiper = new Swiper('.slider', {
+     direction: 'vertical',
+    // freeMode: true,
+    
+    speed: 1500,
+    parallax: true,
+    spaceBetween: 18,
+
+    mousewheel: {
+      enabled: true,
+      sensitivity: 2.4
+    },
+    on: {
+      slideChange: function () {
+        logSlides();
+      },
+    },
+  })
+
+
+function logSlides() {
+  const currentSlide = mySwiper.activeIndex;
+  console.log(`Current Slide: ${currentSlide + 1}`);
+  console.log(`All Slides: ${mySwiper.slides.length}`);
+  const scrollLine = document.querySelector('.scroll-line');
+  scrollLine.style.transform = `translateY(${52+52*currentSlide+1}px)`;
+}
+
+// Initial call to log the current slide and all slides
+logSlides();
+
+// Function to go to a specific slide
+function goToSlide(slideNumber) {
+  mySwiper.slideTo(slideNumber - 1, 1500); // Change the 1500 value to your desired slide transition speed in milliseconds
+  logSlides();
+}
+
+// Event listener for the links
+document.querySelectorAll("a[data-slide]").forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    const slideNumber = parseInt(link.dataset.slide);
+    goToSlide(slideNumber);
+  });
+});
+
 
 
 
@@ -114,3 +134,5 @@ document.addEventListener('DOMContentLoaded', () => {
     return false;
     }
     }*/
+
+
