@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Caudex-Regular;
+    src: url(font/Caudex-Regular.ttf);
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.main-info{
+ 
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%;
+    transition: .5s;
+}
+
+.overlay-right-side{
+    align-items: flex-end;
+    height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 3.125rem;
+    height: calc(100vh - 6.25rem);
+    margin: 3.125rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    
+}
+
+.overlay-right-side.line {
+    height: 50px;
+    width: 3px;
+    background-color: #f0f8ff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50px;
+    transition: all .5s ease-in-out;
+}
+
+h1 span {
+    display: inline-block;
+}
+h1 span:hover {
+    cursor: pointer;
+    color: gold;
+    transition: all .5s ease-out;
+    animation: shrink 0.6s ease-out ;
+  }
+  
+  h1 span.animated {
+    animation: shrink 1.2s ease-out ;
+  }
+
+@keyframes shrink {
+    0% {
+        color: gold;
+        transform: scale(1); /* Исходный размер элемента (без сжатия) */
+      }
+      35% {
+        transform: scaleY(0.6); /* Сжимаем элемент только по вертикали (сверху и снизу) */
+      }
+      50% {
+        transform: scaleY(1.2); /* Применяем эффект пружины - немного увеличиваем элемент */
+      }
+      70% {
+        transform: scaleY(0.9); /* Возвращаем элемент к исходному размеру */
+      }
+      85% {
+        transform: scaleY(1.15); /* Применяем эффект пружины - немного увеличиваем элемент */
+      }
+      100% {
+        transform: scale(1); /* Возвращаем элемент к исходному размеру */
+      }
+    
+}
+
+.btn-outline-light{
+    color: #dfdfdf;
+    border-color: #dfdfdf;
+}
+
+.btn-outline-light:hover{
+    background-color: #dfdfdf;
+}
+
+.logo-img{
+    max-width: 30px;
+    height: auto;
+}

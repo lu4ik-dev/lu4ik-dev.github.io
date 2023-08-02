@@ -1,15 +1,14 @@
-  {
-  "russian": {
-    "greet": "Привет",
-    "complectName": "Дмитрий Смирнов",
-    "btn-contact": "Контакты",
-    "select-lang": "Выберите Ваш язык"
-  },
-  "english": {
-    "greet": "hi",
-    "complectName": "Dmitriy Surname",
-    "btn-contact": "Contact",
-    "select-lang": "Select your language"
+{
+    "russian": {
+      "greet": "Привет",
+      "complectName": "Дмитрий Смирнов",
+      "btn-contact": "Контакты",
+      "select-lang": "Выберите Ваш язык"
+    },
+    "english": {
+      "greet": "hi",
+      "complectName": "Dmitriy Surname",
+      "btn-contact": "Contact",
+      "select-lang": "Select your language"
+    }
   }
-}
-
