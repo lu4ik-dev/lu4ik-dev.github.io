@@ -1,9 +1,3 @@
-
-
-
-
-
-
 async function fetchAndParseJSON(url) {
     try {
       const response = await fetch(url);
@@ -15,7 +9,7 @@ async function fetchAndParseJSON(url) {
     }
   }
   
-  const jsonUrl = 'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/languages.json';
+const jsonUrl = 'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/languages.json';
   
 
   
@@ -46,11 +40,8 @@ function changeLanguage(lang){
             document.getElementById("modal-dialog-change-languageLabel").innerHTML = data[lang]['select-lang'];
             document.getElementById("btn-contact").innerHTML = data[lang]['btn-contact'];
         }
-
         });
     }
-    
-
 }
 
 changeLanguage('english')
@@ -97,16 +88,13 @@ function logSlides() {
   scrollLine.style.transform = `translateY(${52+52*currentSlide+1}px)`;
 }
 
-// Initial call to log the current slide and all slides
 logSlides();
 
-// Function to go to a specific slide
 function goToSlide(slideNumber) {
-  mySwiper.slideTo(slideNumber - 1, 1500); // Change the 1500 value to your desired slide transition speed in milliseconds
+  mySwiper.slideTo(slideNumber - 1, 1500); 
   logSlides();
 }
 
-// Event listener for the links
 document.querySelectorAll("a[data-slide]").forEach(function (link) {
   link.addEventListener("click", function (event) {
     event.preventDefault();
