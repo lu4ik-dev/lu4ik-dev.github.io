@@ -3,12 +3,18 @@
       "greet": "Привет",
       "complectName": "Дмитрий Смирнов",
       "btn-contact": "Контакты",
-      "select-lang": "Выберите Ваш язык"
+      "select-lang": "Выберите Ваш язык",
+      "about-me": "dev this webpage",
+      "skills-title": "Знания и навыки",
+      "skills-description": "ква ква ква ква"
     },
     "english": {
       "greet": "hi",
       "complectName": "Dmitriy Surname",
       "btn-contact": "Contact",
-      "select-lang": "Select your language"
+      "select-lang": "Select your language",
+      "about-me": "dev this page",
+      "skills-title": "Skills",
+      "skills-description": "kva kva kva kva"
     }
   }
