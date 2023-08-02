@@ -22,7 +22,7 @@
 1. Clone the repo
 
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/lu4ik-dev/lu4ik-dev.github.io.git
 ```
 
 
