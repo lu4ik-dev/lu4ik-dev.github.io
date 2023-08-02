@@ -1,13 +1,41 @@
+var prevScrollY = 0;
+const scrollLine = document.querySelector('.scroll-line');
+let stageScroll = 0;
 
 
-window.onscroll = function() {scrollStage()};
 
 function scrollStage() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    scrolled;
+  const currentScrollY = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (currentScrollY / height) * 100;
+  const scrollDirection = currentScrollY > prevScrollY ? `down ${scrolled}` : `up ${scrolled}`;
+  console.log(`Scroll Direction: ${scrollDirection}; prev Scroll Y ${prevScrollY}`);
+  prevScrollY = currentScrollY;
+
+  let pageScrolling = 0;
+/*
+  if (scrolled >= 60) {
+    pageScrolling = 100;
+  } else if (scrolled >= 10) {
+    pageScrolling = 48;
   }
+
+  if (scrolled <= 40) {
+    pageScrolling = 0;
+  } else if (scrolled <= 90) {
+    pageScrolling = 48;
+  }
+*/
+  scrollLine.style.transform = `translateY(${55+scrolled}px)`;
+
+}
+
+document.addEventListener('scroll', scrollStage);
+
+
+
+    // Update the previous scroll position for the next comparison
+
 
 
 
@@ -48,16 +76,7 @@ function changeLanguage(lang){
         });
     }
     
-  /*  const spans = document.querySelectorAll('h1 span');
-    spans.forEach(span => {
-      span.addEventListener('mouseover', () => {
-        span.classList.add('animated');
-      });
-    
-      span.addEventListener('animationend', () => {
-        span.classList.remove('animated');
-      });
-    });*/
+
 }
 
 changeLanguage('english')
@@ -75,3 +94,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+
+
+
+  /*
+
+  document.onkeydown = function(e) {
+    if(event.keyCode == 123) {
+    return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+    return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+    return false;
+    }
+    }*/
