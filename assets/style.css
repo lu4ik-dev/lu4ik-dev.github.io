@@ -90,22 +90,22 @@ h1 span:hover {
 @keyframes shrink {
     0% {
         color: gold;
-        transform: scale(1); /* Исходный размер элемента (без сжатия) */
+        transform: scale(1); 
       }
       35% {
-        transform: scaleY(0.6); /* Сжимаем элемент только по вертикали (сверху и снизу) */
+        transform: scaleY(0.6); 
       }
       50% {
-        transform: scaleY(1.2); /* Применяем эффект пружины - немного увеличиваем элемент */
+        transform: scaleY(1.2); 
       }
       70% {
-        transform: scaleY(0.9); /* Возвращаем элемент к исходному размеру */
+        transform: scaleY(0.9); 
       }
       85% {
-        transform: scaleY(1.15); /* Применяем эффект пружины - немного увеличиваем элемент */
+        transform: scaleY(1.15); 
       }
       100% {
-        transform: scale(1); /* Возвращаем элемент к исходному размеру */
+        transform: scale(1); 
       }
     
 }
