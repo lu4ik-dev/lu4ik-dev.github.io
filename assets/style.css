@@ -151,3 +151,70 @@ h1 span:hover {
 
 
 
+
+.fab.fa-js:hover{
+  color:gold;
+}
+
+.fab.fa-html5:hover{
+  background: linear-gradient(90deg, rgba(228,77,38,1) 49%, rgba(241,101,41,1) 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fab.fa-css3-alt:hover{
+  background: linear-gradient(90deg, rgba(38,77,228,1) 49%, rgba(41,101,241,1) 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fab.fa-php:hover{
+  color: #787cb4;
+}
+
+.fab.fa-node-js:hover{
+  color: #8CCA48;
+}
+
+.fab.fa-windows:hover{
+  color: #13bbf7;
+}
+.fab.fa-linux:hover{
+  color: #333;
+  background-image: url('linux.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fab.fa-python:hover{
+  
+  background: linear-gradient(-45deg, rgba(255, 222, 88) 49%, rgba(56,115,164,1) 49%);
+  background-image: url('py.png');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.fa-solid.fa-database:hover{
+  background: linear-gradient(180deg, rgb(228, 222, 38) 0%, rgb(228, 111, 38) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Styles for mobile devices without hover */
+@media (max-width: 767px) {
+  .fab.fa-js,
+  .fab.fa-html5,
+  .fab.fa-css3-alt,
+  .fab.fa-php,
+  .fab.fa-windows,
+  .fab.fa-node-js {
+    /* Define the styles here that you want to apply for mobile devices without hover */
+    /* For example, you can change the color or background without hover effects */
+    color: initial; /* Change to the default color for the icons */
+  }
+}

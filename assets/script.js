@@ -58,16 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
   });
 
   const mySwiper = new Swiper('.slider', {
      direction: 'vertical',
     // freeMode: true,
-    
     speed: 1500,
     parallax: true,
     spaceBetween: 18,
-
     mousewheel: {
       enabled: true,
       sensitivity: 2.4
@@ -81,11 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function logSlides() {
-  const currentSlide = mySwiper.activeIndex;
-  console.log(`Current Slide: ${currentSlide + 1}`);
+  console.log(`Current Slide: ${mySwiper.activeIndex + 1}`);
   console.log(`All Slides: ${mySwiper.slides.length}`);
   const scrollLine = document.querySelector('.scroll-line');
-  scrollLine.style.transform = `translateY(${52+52*currentSlide+1}px)`;
+  scrollLine.style.transform = `translateY(${52+52*mySwiper.activeIndex+1}px)`;
+
 }
 
 logSlides();
