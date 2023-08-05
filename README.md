@@ -4,7 +4,7 @@
     <img src="assets/elis.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Dmitriy Smirnov | Portfolio</h3>
+  <h3 align="center">Dmitriy Smirnov | Portfolio (in dev)</h3>
 
 </p>
 
