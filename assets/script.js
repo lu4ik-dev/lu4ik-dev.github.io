@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+
+    document.getElementById('preloader').style.display = 'none';
   });
 
   const mySwiper = new Swiper('.slider', {

@@ -202,19 +202,104 @@ h1 span:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.fab.fa-git:hover{
+  color: #f15135;
+}
 
+.fab.fa-github:hover{
+  color: #8c4caf;
+}
 
-
-/* Styles for mobile devices without hover */
 @media (max-width: 767px) {
-  .fab.fa-js,
-  .fab.fa-html5,
-  .fab.fa-css3-alt,
-  .fab.fa-php,
-  .fab.fa-windows,
-  .fab.fa-node-js {
-    /* Define the styles here that you want to apply for mobile devices without hover */
-    /* For example, you can change the color or background without hover effects */
-    color: initial; /* Change to the default color for the icons */
+
+  .fab.fa-js{
+    color:gold;
   }
+  
+  .fab.fa-html5{
+    background: linear-gradient(90deg, rgba(228,77,38,1) 49%, rgba(241,101,41,1) 49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .fab.fa-css3-alt{
+    background: linear-gradient(90deg, rgba(38,77,228,1) 49%, rgba(41,101,241,1) 49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .fab.fa-php{
+    color: #787cb4;
+  }
+  
+  .fab.fa-node-js{
+    color: #8CCA48;
+  }
+  
+  .fab.fa-windows{
+    color: #13bbf7;
+  }
+  .fab.fa-linux{
+    color: #333;
+    background-image: url('linux.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .fab.fa-python{
+    
+    background: linear-gradient(-45deg, rgba(255, 222, 88) 49%, rgba(56,115,164,1) 49%);
+    background-image: url('py.png');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  
+  .fa-solid.fa-database{
+    background: linear-gradient(180deg, rgb(228, 222, 38) 0%, rgb(228, 111, 38) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fab.fa-git{
+    color: #f15135;
+  }
+  
+  .fab.fa-github{
+    color: #8c4caf;
+  }
+}
+
+.fab:hover{
+  transition: all .5s ease-out;
+  animation: shrinkXY .6s ease-out, jumping .6s ease-out;
+}
+
+
+@keyframes shrinkXY {
+  0% {
+      transform: scale(1); 
+    }
+    35% {
+      transform: scale(0.6); 
+    }
+    50% {
+      transform: scale(1.2);  
+    }
+    70% {
+      transform: scale(0.9); 
+    }
+    85% {
+      transform: scale(1.15); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+}
+
+
+.fa-solid:hover{
+  transition: all .5s ease-out;
+  animation: shrinkXY .6s ease-out;
 }
