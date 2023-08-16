@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slide1 = () => (
+const Slide4 = ({ languageData }) => (
   <div class="bg-primary py-5 vh-100">
     <div class="container px-5">
       <div class="row gx-5 align-items-center justify-content-center">
@@ -30,4 +30,4 @@ const Slide1 = () => (
   </div>
 );
 
-export default Slide1;
+export default Slide4;

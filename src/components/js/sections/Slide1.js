@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slide1 = () => (
+const Slide1 = ({ languageData }) => (
   <header class="bg-gradient-start vh-100">
     <div class="position-absolute w-100 py-3 mb-4">
       <div class="container-fluid p-0 px-lg-2 d-flex flex-wrap justify-content-center">
@@ -27,7 +27,7 @@ const Slide1 = () => (
           </h1>
         </a>
         <a class="mx-2 py-2 my-auto btn btn-outline-light fw-bolder" id="btn-contact">
-          Contact
+          {languageData.btnContactLabel}
         </a>
         <button
           type="button"

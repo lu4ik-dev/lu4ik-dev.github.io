@@ -3,14 +3,15 @@ import Fullpage, {
   FullPageSections,
   FullpageSection,
   FullpageContext,
-  FullpageNavigation,
 } from '@ap.cx/react-fullpage';
 import OverlayRightScroll, { changeStyle } from './overlayRightScroll';
+import FullpageNavigation from './slideNavigation';
 
 const FpScroll = ({ content }) => {
   return (
     <div>
-      <Fullpage transitionTiming={1200} onSlideChange={console.log('slide changed')}>
+      <Fullpage transitionTiming={1200} onChange={console.log('slide changed')}>
+        <FullpageNavigation />
         <FullPageSections>
           {content.map((sectionContent, index) => (
             <FullpageSection key={index} style={{ height: '100vh' }}>
@@ -18,7 +19,6 @@ const FpScroll = ({ content }) => {
             </FullpageSection>
           ))}
         </FullPageSections>
-        <OverlayRightScroll />
       </Fullpage>
     </div>
   );

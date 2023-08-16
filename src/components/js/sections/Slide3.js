@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slide1 = () => (
+const Slide3 = ({ languageData }) => (
   <div class="bg-dark py-5 vh-100">
     <div class="container px-5">
       <div class="row gx-5 align-items-center justify-content-center">
@@ -21,8 +21,9 @@ const Slide1 = () => (
           <i data-bs-toggle="tooltip" title="Git" class="fab fa-git"></i>
         </p>
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-          <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="#features"></a>
-          <a class="btn btn-outline-light btn-lg px-4" href="#!"></a>
+          <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="#">
+            View projects (in dev)
+          </a>
         </div>
 
         <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center text-white fs-1"></div>
@@ -31,4 +32,4 @@ const Slide1 = () => (
   </div>
 );
 
-export default Slide1;
+export default Slide3;

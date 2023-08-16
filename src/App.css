@@ -140,13 +140,22 @@ h1 span:hover {
 }
 
 .scroll-line{
+  position: absolute;
   height: 55px;
-  transform: translateY(55px);
+  opacity: 0%;
   border-right: 3px solid #dfdfdf;
-
-  transition: transform 0.3s ease;
+  transform: translateX(45px);
+  animation: slideShow .5s forwards;
 }
 
+body{
+  animation: slideShow .5s forwards;
+}
+@keyframes slideShow {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+
+}
 
 
 
