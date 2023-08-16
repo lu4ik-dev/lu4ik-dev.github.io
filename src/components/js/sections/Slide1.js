@@ -7,7 +7,7 @@ const Slide1 = ({ languageData }) => (
         <a
           href="https://lu4ik-dev.github.io/"
           class="d-flex align-items-center ms-lg-3 mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-          <img src="assets/elis.png" class="logo-img my-auto" />
+          <img src="assets/elis.png" class="logo-img my-auto" alt="logo" />
           <h1 class="fs-4 logo-add-text text-light my-auto">
             <span>D</span>
             <span>m</span>
@@ -26,7 +26,7 @@ const Slide1 = ({ languageData }) => (
             <span>v</span>
           </h1>
         </a>
-        <a class="mx-2 py-2 my-auto btn btn-outline-light fw-bolder" id="btn-contact">
+        <a class="mx-2 py-2 my-auto btn btn-outline-light fw-bolder" href="#" id="btn-contact">
           {languageData.btnContactLabel}
         </a>
         <button
@@ -38,6 +38,8 @@ const Slide1 = ({ languageData }) => (
         </button>
       </div>
     </div>
+
+    <div>123</div>
   </header>
 );
 

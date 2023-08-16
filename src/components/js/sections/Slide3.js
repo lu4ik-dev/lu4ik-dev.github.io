@@ -21,7 +21,7 @@ const Slide3 = ({ languageData }) => (
           <i data-bs-toggle="tooltip" title="Git" class="fab fa-git"></i>
         </p>
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-          <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="#">
+          <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="projects">
             View projects (in dev)
           </a>
         </div>

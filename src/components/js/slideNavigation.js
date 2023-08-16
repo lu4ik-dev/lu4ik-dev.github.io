@@ -29,8 +29,7 @@ class FullpageNavigation extends PureComponent {
   };
 
   render() {
-    const { style, itemStyle, reverse = false } = this.props;
-    const { number, slides, transitionTiming } = this.context;
+    const { number, slides } = this.context;
 
     const gotoSlide = (slide) => {
       const { goto } = this.context;
