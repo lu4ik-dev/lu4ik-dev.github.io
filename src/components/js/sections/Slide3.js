@@ -5,7 +5,7 @@ const Slide3 = ({ languageData }) => (
     <div class="container px-5">
       <div class="row gx-5 align-items-center justify-content-center">
         <h1 class="display-5 fw-bolder text-white mb-2" id="skills-title">
-          Skills & Experience
+          {languageData.skillsTitleText}
         </h1>
         <p class="fw-normal text-white-50 mb-4 fs-3">
           <i data-bs-toggle="tooltip" title="Java Script" class="fab fa-js"></i>
