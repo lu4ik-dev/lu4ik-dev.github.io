@@ -1,0 +1,304 @@
+:root {
+	--transition: 1.75s cubic-bezier(.2, .6, 0, 1);
+}
+
+@font-face {
+    font-family: Caudex-Regular;
+    src: url('components/font/Caudex-Regular.ttf');
+}
+body, html {
+    background-color: #212121;
+
+	  height: 100%;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.slider{
+ height: 100%;
+}
+.bg-gradient-start{
+  background-color:  #212121;;
+background-image:
+radial-gradient(at 35% 95%, rgba(203, 141, 251, 0.1) 0px, transparent 50%),
+radial-gradient(at 81% 83%, hsla(214,65%,68%, 0.2) 0px, transparent 50%),
+radial-gradient(at 71% 56%, hsla(224,85%,63%, 0.3) 0px, transparent 50%),
+radial-gradient(at 21% 64%, hsla(134,60%,67%, 0.2) 0px, transparent 50%),
+radial-gradient(at 9% 14%, hsla(258,83%,74%, 0.3) 0px, transparent 50%),
+radial-gradient(at 51% 6%, hsla(280,97%,62%, 0.2) 0px, transparent 50%),
+radial-gradient(at 84% 25%, hsla(207,91%,69%, 0.1) 0px, transparent 50%);
+}
+.main-info{
+ 
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%;
+    transition: .5s;
+}
+
+.overlay-right-side{
+    align-items: flex-end;
+    height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 3.125rem;
+    height: calc(100vh - 6.25rem);
+    margin: 3.125rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    
+}
+
+
+.overlay-right-side.line {
+    height: 50px;
+    width: 3px;
+    background-color: #f0f8ff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50px;
+    transition: all .5s ease-in-out;
+}
+
+h1 span {
+    display: inline-block;
+}
+h1 span:hover {
+    cursor: pointer;
+    color: gold;
+    transition: all .5s ease-out;
+    animation: shrink .6s ease-out;
+  }
+  
+
+@keyframes shrink {
+    0% {
+        color: gold;
+        transform: scale(1); 
+      }
+      35% {
+        transform: scaleY(0.6); 
+      }
+      50% {
+        transform: scaleY(1.2); 
+      }
+      70% {
+        transform: scaleY(0.9); 
+      }
+      85% {
+        transform: scaleY(1.15); 
+      }
+      100% {
+        transform: scale(1); 
+      }
+    
+}
+
+.btn-outline-light{
+    color: #dfdfdf;
+    border-color: #dfdfdf;
+}
+
+.btn-outline-light:hover{
+    background-color: #dfdfdf;
+}
+
+.logo-img{
+    max-width: 30px;
+    height: auto;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    margin-right: .3rem;
+}
+
+.logo-img:hover{
+  background-color: gold;
+  animation: shrink 0.6s ease-out;
+}
+
+.logo-add-text{
+  font-family: Caudex-Regular;
+}
+
+.nav-link{
+  border-right: 1px solid #dfdfdf;
+}
+
+.scroll-line{
+  height: 55px;
+  transform: translateY(55px);
+  border-right: 3px solid #dfdfdf;
+
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+.fab.fa-js:hover{
+  color:gold;
+}
+
+.fab.fa-html5:hover{
+  background: linear-gradient(90deg, rgba(228,77,38,1) 49%, rgba(241,101,41,1) 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fab.fa-css3-alt:hover{
+  background: linear-gradient(90deg, rgba(38,77,228,1) 49%, rgba(41,101,241,1) 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fab.fa-php:hover{
+  color: #787cb4;
+}
+
+.fab.fa-node-js:hover{
+  color: #8CCA48;
+}
+
+.fab.fa-windows:hover{
+  color: #13bbf7;
+}
+.fab.fa-linux:hover{
+  color: #333;
+  background-image: url('components/images/linux.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fab.fa-python:hover{
+  
+  background: linear-gradient(-45deg, rgba(255, 222, 88) 49%, rgba(56,115,164,1) 49%);
+  background-image: url('components/images/py.png');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.fa-solid.fa-database:hover{
+  background: linear-gradient(180deg, rgb(228, 222, 38) 0%, rgb(228, 111, 38) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fab.fa-git:hover{
+  color: #f15135;
+}
+
+.fab.fa-github:hover{
+  color: #8c4caf;
+}
+
+@media (max-width: 767px) {
+
+  .fab.fa-js{
+    color:gold;
+  }
+  
+  .fab.fa-html5{
+    background: linear-gradient(90deg, rgba(228,77,38,1) 49%, rgba(241,101,41,1) 49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .fab.fa-css3-alt{
+    background: linear-gradient(90deg, rgba(38,77,228,1) 49%, rgba(41,101,241,1) 49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .fab.fa-php{
+    color: #787cb4;
+  }
+  
+  .fab.fa-node-js{
+    color: #8CCA48;
+  }
+  
+  .fab.fa-windows{
+    color: #13bbf7;
+  }
+  .fab.fa-linux{
+    color: #333;
+    background-image: url('components/images/linux.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .fab.fa-python{
+    
+    background: linear-gradient(-45deg, rgba(255, 222, 88) 49%, rgba(56,115,164,1) 49%);
+    background-image: url('components/images/py.png');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  
+  .fa-solid.fa-database{
+    background: linear-gradient(180deg, rgb(228, 222, 38) 0%, rgb(228, 111, 38) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fab.fa-git{
+    color: #f15135;
+  }
+  
+  .fab.fa-github{
+    color: #8c4caf;
+  }
+}
+
+.fab:hover{
+  transition: all .5s ease-out;
+  animation: shrinkXY .6s ease-out, jumping .6s ease-out;
+}
+
+
+@keyframes shrinkXY {
+  0% {
+      transform: scale(1); 
+    }
+    35% {
+      transform: scale(0.6); 
+    }
+    50% {
+      transform: scale(1.2);  
+    }
+    70% {
+      transform: scale(0.9); 
+    }
+    85% {
+      transform: scale(1.15); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+}
+
+
+.fa-solid:hover{
+  transition: all .5s ease-out;
+  animation: shrinkXY .6s ease-out;
+}
