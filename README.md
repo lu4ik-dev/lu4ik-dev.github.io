@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/lu4ik-dev/lu4ik-dev.github.io">
-    <img src="assets/elis.png" alt="Logo" width="80" height="80">
+    <img src="src/components/images/elis.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Dmitriy Smirnov | Portfolio (in dev)</h3>
