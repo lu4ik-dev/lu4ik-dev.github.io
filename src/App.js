@@ -19,6 +19,7 @@ function App() {
     skillsTitleText: '',
     selectLangLabel: '',
     btnContactLabel: '',
+    greetingTitle: '',
   });
 
   useEffect(() => {
