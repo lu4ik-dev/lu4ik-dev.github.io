@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/lu4ik-dev.github.io/static/css/main.41ef7a65.css",
-    "main.js": "/lu4ik-dev.github.io/static/js/main.d89e57df.js",
-    "static/js/787.7067a687.chunk.js": "/lu4ik-dev.github.io/static/js/787.7067a687.chunk.js",
-    "static/media/Caudex-Regular.ttf": "/lu4ik-dev.github.io/static/media/Caudex-Regular.5d1b83ad8c09d0ea0568.ttf",
-    "index.html": "/lu4ik-dev.github.io/index.html",
-    "main.41ef7a65.css.map": "/lu4ik-dev.github.io/static/css/main.41ef7a65.css.map",
-    "main.d89e57df.js.map": "/lu4ik-dev.github.io/static/js/main.d89e57df.js.map",
-    "787.7067a687.chunk.js.map": "/lu4ik-dev.github.io/static/js/787.7067a687.chunk.js.map"
+    "main.css": "/static/css/main.82f4d752.css",
+    "main.js": "/static/js/main.7fb8a488.js",
+    "static/js/787.7067a687.chunk.js": "/static/js/787.7067a687.chunk.js",
+    "static/media/Caudex-Regular.ttf": "/static/media/Caudex-Regular.5d1b83ad8c09d0ea0568.ttf",
+    "index.html": "/index.html",
+    "main.82f4d752.css.map": "/static/css/main.82f4d752.css.map",
+    "main.7fb8a488.js.map": "/static/js/main.7fb8a488.js.map",
+    "787.7067a687.chunk.js.map": "/static/js/787.7067a687.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41ef7a65.css",
-    "static/js/main.d89e57df.js"
+    "static/css/main.82f4d752.css",
+    "static/js/main.7fb8a488.js"
   ]
 }
