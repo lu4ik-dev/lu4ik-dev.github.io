@@ -18,5 +18,6 @@ export function changeLanguage(selectedLang, data) {
     selectLangLabel: langData['select-lang'],
     btnContactLabel: langData['btn-contact'],
     greetingTitle: langData['greeting-title'],
+    greetingDescription: langData['greeting-description'],
   };
 }

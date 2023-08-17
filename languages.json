@@ -7,7 +7,8 @@
       "about-me": "dev this webpage",
       "skills-title": "Знания и навыки",
       "skills-description": "ква ква ква ква",
-      "greeting-title": "Привет! Я Front-end разработчик!"
+      "greeting-title": "Привет! Я Front-end разработчик!",
+      "greeting-description": "как же я люблю жареную картошечку.. и кофе. Теперь добавлю где нибудь на сайте кофе. Этого описания потом не будет, а кофе останется."
     },
     "english": {
       "greet": "hi",
@@ -17,6 +18,7 @@
       "about-me": "dev this page",
       "skills-title": "Skills & Experience",
       "skills-description": "kva kva kva kva",
-      "greeting-title": "Hi! I'm Front-end developer!"
+      "greeting-title": "Hi! I'm Front-end developer!",
+      "greeting-description": "description about me. maybe here was info about pet projects"
     }
   }

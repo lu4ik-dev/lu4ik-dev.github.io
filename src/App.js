@@ -20,6 +20,7 @@ function App() {
     selectLangLabel: '',
     btnContactLabel: '',
     greetingTitle: '',
+    greetingDescription: '',
   });
 
   useEffect(() => {
