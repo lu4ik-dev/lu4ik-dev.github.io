@@ -1,11 +1,22 @@
 import React from 'react';
 
 function SpanTitles(text, element) {
-  element.textContent = '';
+  element.innerHTML = ''; // Clear the content of the element
+  let currentDiv = document.createElement('div'); // Initialize the first div
+
   for (const char of text) {
-    const spanElement = document.createElement('span');
-    spanElement.textContent = char === ' ' ? ' ' : char;
-    element.appendChild(spanElement);
+    if (char === ' ') {
+      element.appendChild(currentDiv);
+      currentDiv = document.createElement('div');
+    } else {
+      const spanElement = document.createElement('span');
+      spanElement.textContent = char;
+      currentDiv.appendChild(spanElement);
+    }
+  }
+
+  if (currentDiv.textContent !== '') {
+    element.appendChild(currentDiv);
   }
 }
 

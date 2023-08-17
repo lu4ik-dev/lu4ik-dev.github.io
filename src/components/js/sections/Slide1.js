@@ -3,12 +3,17 @@ import SpanTitles from '../SpanTitles';
 import ImageComputer from '../../images/computer';
 const Slide1 = ({ languageData }) => {
   const greetingTitleRef = useRef(null);
+  const complectNameRef = useRef(null);
 
   useEffect(() => {
     const greetingTitleElement = greetingTitleRef.current;
+    const complectNameElement = complectNameRef.current;
 
     if (greetingTitleElement) {
       SpanTitles(languageData.greetingTitle, greetingTitleElement);
+    }
+    if (complectNameElement) {
+      SpanTitles(languageData.complectNameText, complectNameElement);
     }
   }, [languageData]);
   return (
@@ -19,7 +24,7 @@ const Slide1 = ({ languageData }) => {
             href="https://lu4ik-dev.github.io/"
             class="d-flex align-items-center ms-lg-3 mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
             <img src="assets/elis.png" class="logo-img my-auto" alt="logo" />
-            <h1 class="fs-4 logo-add-text text-light my-auto">
+            <h1 class="fs-4 logo-add-text text-light my-auto" ref={complectNameRef}>
               <span>D</span>
               <span>m</span>
               <span>i</span>
@@ -49,27 +54,39 @@ const Slide1 = ({ languageData }) => {
           </button>
         </div>
       </div>
-
-      <div class="container px-auto py-5">
-        <div
-          class="row gx-5 align-items-center py-auto"
-          style={{
-            width: '88.3125rem',
-            height: '33rem',
-          }}>
-          <div class="col-5 py-5 ">
-            <h1 class="display-5 fw-bolder text-white mb-2 fs-1" ref={greetingTitleRef}>
-              {languageData.greetingTitle}
-            </h1>
-            <p>{languageData.greetingDescription}</p>
-          </div>
-          <div class="col-5 vh-75 w-75">
-            {/* d-none after col-xxl-6 */}
-            <div>
-              <ImageComputer />
+      <div class="container pt-5" data-path="0.1">
+        <div class="row align-items-center mb-5" data-path="0.1.0">
+          <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0" data-path="0.1.0.0">
+            <h1
+              class="display-4 fw-bold mb-5"
+              data-config-id="header"
+              data-path="0.1.0.0.0"
+              ref={greetingTitleRef}></h1>
+            <p class="lead mb-5" data-config-id="desc" data-path="0.1.0.0.1">
+              {languageData.greetingDescription}
+            </p>
+            <div class="d-flex flex-wrap" data-path="0.1.0.0.2">
+              <a
+                class="btn btn-primary me-2 mb-2 mb-sm-0"
+                href="#"
+                data-config-id="hero-primary-action"
+                data-path="0.1.0.0.2.0">
+                Track your performance
+              </a>
+              <a
+                class="btn btn-outline-secondary mb-2 mb-sm-0"
+                href="#"
+                data-config-id="hero-secondary-action"
+                data-path="0.1.0.0.2.1">
+                Learn more
+              </a>
             </div>
           </div>
+          <div class="col-12 col-lg-6 offset-lg-1" data-path="0.1.0.1">
+            <ImageComputer />
+          </div>
         </div>
+        <div class="text-center d-none d-lg-block" data-path="0.1.1"></div>
       </div>
     </header>
   );
