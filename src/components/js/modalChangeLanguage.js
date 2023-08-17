@@ -41,39 +41,6 @@ const ModalChangeLanguage = ({ onSelectLanguage, languageData }) => {
               <i className="fa fa-flag" aria-hidden="true"></i>
               <span className="ps-1">Russian</span>
             </button>
-
-            <button
-              className="btn btn-outline-light mx-auto"
-              name="btn-change-lang"
-              onClick={() => handleLanguageChange('spanish')}
-              onPress={() => handleLanguageChange('spanish')}>
-              <i className="fa fa-flag" aria-hidden="true"></i>
-              <span className="ps-1">spanish</span>
-            </button>
-            <button
-              className="btn btn-outline-light mx-auto"
-              name="btn-change-lang"
-              onClick={() => handleLanguageChange('polish')}
-              onPress={() => handleLanguageChange('polish')}>
-              <i className="fa fa-flag" aria-hidden="true"></i>
-              <span className="ps-1">polish</span>
-            </button>
-            <button
-              className="btn btn-outline-light mx-auto"
-              name="btn-change-lang"
-              onClick={() => handleLanguageChange('chinese')}
-              onPress={() => handleLanguageChange('chinese')}>
-              <i className="fa fa-flag" aria-hidden="true"></i>
-              <span className="ps-1">chinese</span>
-            </button>
-            <button
-              className="btn btn-outline-light mx-auto"
-              name="btn-change-lang"
-              onClick={() => handleLanguageChange('ukrainian')}
-              onPress={() => handleLanguageChange('ukrainian')}>
-              <i className="fa fa-flag" aria-hidden="true"></i>
-              <span className="ps-1">ukrainian</span>
-            </button>
           </div>
         </div>
       </div>
