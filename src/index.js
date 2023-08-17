@@ -11,7 +11,7 @@ root.render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects slides={slidesData} />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,
