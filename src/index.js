@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Projects from './components/js/Projects';
+import slidesData from './projects.json';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +13,7 @@ root.render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects slides={slidesData} />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>,
