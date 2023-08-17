@@ -6,7 +6,8 @@
       "select-lang": "Выберите Ваш язык",
       "about-me": "dev this webpage",
       "skills-title": "Знания и навыки",
-      "skills-description": "ква ква ква ква"
+      "skills-description": "ква ква ква ква",
+      "greeting-title": "Привет! Я Front-end разработчик!"
     },
     "english": {
       "greet": "hi",
@@ -15,6 +16,7 @@
       "select-lang": "Select your language",
       "about-me": "dev this page",
       "skills-title": "Skills & Experience",
-      "skills-description": "kva kva kva kva"
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "Hi! I'm Front-end developer!"
     }
   }
