@@ -12,7 +12,7 @@
     },
     "english": {
       "greet": "hi",
-      "complectName": "Dmitriy Surname",
+      "complectName": "Dmitriy Smirnov",
       "btn-contact": "Contact",
       "select-lang": "Select your language",
       "about-me": "dev this page",
@@ -20,5 +20,82 @@
       "skills-description": "kva kva kva kva",
       "greeting-title": "Hi! I'm Front-end developer!",
       "greeting-description": "description about me. maybe here was info about pet projects"
+    },
+    "spanish": {
+      "greet": "hola",
+      "complectName": "Dmitriy Smirnov",
+      "btn-contact": "Contacto",
+      "select-lang": "Selecciona tu idioma",
+      "about-me": "desarrollador de esta página",
+      "skills-title": "Habilidades y Experiencia",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "¡Hola! Soy un desarrollador Front-end",
+      "greeting-description": "descripción sobre mí. quizás aquí había información sobre proyectos personales"
+    },
+    "chinese": {
+      "greet": "你好",
+      "complectName": "Dmitriy Smirnov",
+      "btn-contact": "联系方式",
+      "select-lang": "选择您的语言",
+      "about-me": "开发此页面",
+      "skills-title": "技能与经验",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "你好！我是前端开发者！",
+      "greeting-description": "关于我。也许这里有关于个人项目的信息"
+    },
+    "japanese": {
+      "greet": "こんにちは",
+      "complectName": "Dmitriy Smirnov",
+      "btn-contact": "お問い合わせ",
+      "select-lang": "言語を選択",
+      "about-me": "このページを開発",
+      "skills-title": "スキルと経験",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "こんにちは！私はフロントエンド開発者です！",
+      "greeting-description": "自己紹介。おそらくここには個人プロジェクトに関する情報がありました"
+    },
+    "french": {
+      "greet": "salut",
+      "complectName": "Dmitriy Smirnov",
+      "btn-contact": "Contact",
+      "select-lang": "Sélectionnez votre langue",
+      "about-me": "développeur de cette page",
+      "skills-title": "Compétences et Expérience",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "Salut ! Je suis un développeur Front-end !",
+      "greeting-description": "présentation de moi-même. peut-être qu'ici se trouvait des informations sur des projets personnels"
+    },
+    "german": {
+      "greet": "hallo",
+      "complectName": "Dmitriy Smirnov",
+      "btn-contact": "Kontakt",
+      "select-lang": "Wähle deine Sprache",
+      "about-me": "entwickle diese Seite",
+      "skills-title": "Fähigkeiten & Erfahrung",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "Hallo! Ich bin Front-End Entwickler!",
+      "greeting-description": "Beschreibung über mich. Möglicherweise befanden sich hier Informationen über eigene Projekte"
+    },
+    "polish": {
+      "greet": "cześć",
+      "complectName": "Dmitriy Smirnov",
+      "btn-contact": "Kontakt",
+      "select-lang": "Wybierz swój język",
+      "about-me": "twórca tej strony",
+      "skills-title": "Umiejętności i Doświadczenie",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "Cześć! Jestem deweloperem Front-end!",
+      "greeting-description": "opis o mnie. Być może tutaj znajdowały się informacje o projektach osobistych"
+    },
+    "ukrainian": {
+      "greet": "привіт",
+      "complectName": "Дмитрий Смирнов",
+      "btn-contact": "Контакт",
+      "select-lang": "Виберіть вашу мову",
+      "about-me": "розробник цієї сторінки",
+      "skills-title": "Навички та Досвід",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "Привіт! Я Front-end розробник!",
+      "greeting-description": "опис про мене. Можливо тут була інформація про особисті проекти"
     }
   }
