@@ -17,5 +17,6 @@ export function changeLanguage(selectedLang, data) {
     skillsTitleText: langData['skills-title'],
     selectLangLabel: langData['select-lang'],
     btnContactLabel: langData['btn-contact'],
+    greetingTitle: langData['greeting-title'],
   };
 }
