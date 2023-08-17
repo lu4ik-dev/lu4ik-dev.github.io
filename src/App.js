@@ -36,12 +36,16 @@ function App() {
   };
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Sections languageData={languageData} />} />
-        <Route path="/projects" element={<Projects slides={slidesData} />} />
-      </Routes>
-    </Router>
+    <div>
+      <ModalChangeLanguage onSelectLanguage={handleLanguageChange} languageData={languageData} />
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Sections languageData={languageData} />} />
+          <Route path="/projects" element={<Projects slides={slidesData} />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

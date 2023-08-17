@@ -51,16 +51,23 @@ const Slide1 = ({ languageData }) => {
       </div>
 
       <div class="container px-auto py-5">
-        <div class="row gx-5 align-items-center justify-content-center py-auto">
-          <div class="col-lg-8 col-xl-7 col-xxl-6">
+        <div
+          class="row gx-5 align-items-center py-auto"
+          style={{
+            width: '88.3125rem',
+            height: '33rem',
+          }}>
+          <div class="col-5 py-5 ">
             <h1 class="display-5 fw-bolder text-white mb-2 fs-1" ref={greetingTitleRef}>
               {languageData.greetingTitle}
             </h1>
             <p>{languageData.greetingDescription}</p>
           </div>
-          <div class="col-xl-5 col-xxl-6  d-xl-block text-center">
+          <div class="col-5 vh-75 w-75">
             {/* d-none after col-xxl-6 */}
-            <ImageComputer width="auto" height="10vh" />
+            <div>
+              <ImageComputer />
+            </div>
           </div>
         </div>
       </div>
