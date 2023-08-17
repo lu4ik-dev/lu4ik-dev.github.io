@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import SpanTitles from '../SpanTitles';
 const Slide2 = ({ languageData }) => {
   const complectNameRef = useRef(null);
 
@@ -7,18 +7,10 @@ const Slide2 = ({ languageData }) => {
     const complectNameElement = complectNameRef.current;
 
     if (complectNameElement) {
-      spanTitles(languageData.complectNameText, complectNameElement);
+      SpanTitles(languageData.complectNameText, complectNameElement);
     }
   }, [languageData]);
 
-  function spanTitles(text, element) {
-    element.textContent = '';
-    for (const char of text) {
-      const spanElement = document.createElement('span');
-      spanElement.textContent = char === ' ' ? ' ' : char;
-      element.appendChild(spanElement);
-    }
-  }
   return (
     <div class="bg-primary py-5 vh-100">
       <div class="container px-5">

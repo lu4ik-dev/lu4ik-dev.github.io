@@ -8,6 +8,8 @@ import ModalChangeLanguage from './components/js/modalChangeLanguage';
 import { fetchAndParseJSON, changeLanguage } from './components/js/changeLanguage';
 import OverlayBottomButtons from './components/js/overlayBottomButtons';
 import Projects from './components/js/Projects';
+import slidesData from './projects.json';
+
 const jsonUrl =
   'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/languages.json';
 
@@ -38,7 +40,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Sections languageData={languageData} />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects slides={slidesData} />} />
         </Routes>
       </Router>
     </div>
