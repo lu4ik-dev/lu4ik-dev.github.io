@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Use HashRouter
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import './App.css';
 import Sections from './components/js/sections';
 import ModalChangeLanguage from './components/js/modalChangeLanguage';
 import { fetchAndParseJSON, changeLanguage } from './components/js/changeLanguage';
-import OverlayBottomButtons from './components/js/overlayBottomButtons';
 import Projects from './components/js/Projects';
 import slidesData from './projects.json';
 
@@ -24,7 +23,13 @@ function App() {
   });
 
   useEffect(() => {
-    handleLanguageChange('english');
+    const storedLanguage = localStorage.getItem('LSLanguage');
+    if (storedLanguage == 'russian' || storedLanguage == 'english') {
+      handleLanguageChange(storedLanguage);
+    } else {
+      localStorage.setItem('LSLanguage', 'english');
+      handleLanguageChange('english');
+    }
   }, []);
 
   const handleLanguageChange = async (selectedLang) => {
@@ -38,8 +43,7 @@ function App() {
   return (
     <div>
       <ModalChangeLanguage onSelectLanguage={handleLanguageChange} languageData={languageData} />
-
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Routes>
           <Route path="/" element={<Sections languageData={languageData} />} />
           <Route path="/projects" element={<Projects slides={slidesData} />} />

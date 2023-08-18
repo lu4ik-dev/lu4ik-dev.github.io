@@ -7,21 +7,8 @@
     radial-gradient(at 52% 45%, hsla(242, 100%, 70%, 0.918) 0px, transparent 50%);
     height: 70vmin;
     transition: all .5s ease-out;
-    animation: animateLaptop 3s ease-out infinite;
 }
 
-
-@keyframes animateLaptop {
-  0% {
-    transform: scale(1) translateY(1px); 
-  }
-  50% {
-    transform: scale(1.01) translateY(5px); 
-  }
-  100% {
-    transform: scale(1) translateY(1px); 
-  }
-}
 
 .keyboard-hover-element {
     fill: #b0b0b0;
@@ -62,13 +49,28 @@ fill: #b0b0b0;
 .circular-digram-pink{
     transition: fill .5s ease-in-out;
     fill: #b0b0b0;
+    
 }
 .circular-digram-pink:hover{
     fill: #ff00ff;
+    animation: animateHeart .7s linear infinite;
+
 }
 .circular-digram-pink:not(:hover){
 fill: #b0b0b0;
 }
+
+@keyframes animateHeart {
+  0% {
+  transform: scale(1) ; 
+  }
+  50% {
+  transform: scale(0.95) ; 
+  }
+  100% {
+  transform: scale(1) ; 
+  }
+  }
 
 .decoration-bottom-animate{
 transition: all .5s ease-out;
@@ -76,16 +78,52 @@ animation: animateBottomLaptop 5s linear infinite;
 }
 
 
-
 @keyframes animateBottomLaptop {
 0% {
 transform: scale(1) translateY(1px); 
 }
 50% {
-transform: scale(1.01) translateY(10px); 
+transform: scale(1.02) translateY(5px); 
 }
 100% {
 transform: scale(1) translateY(1px); 
 }
 }
 
+  .screen-element-question-mark{
+    transition: fill .5s ease-in-out;
+    fill: #b0b0b0;
+  }
+  .screen-element-question-mark:hover{
+    fill: #ff00ff;
+    animation: animateHeart .7s linear infinite;
+
+  }
+  .screen-element-question-mark:not(:hover){
+    fill: #b0b0b0;
+  }
+  
+
+.screen-element-code-left{
+  transition: fill .5s ease-in-out;
+  fill: #b0b0b0;
+}
+.screen-element-code-left:hover{
+  fill: #ff00ff;
+  animation: animateHeart .7s linear infinite;
+}
+.screen-element-code-left:not(:hover){
+  fill: #b0b0b0;
+}
+
+.screen-element-code-bottom{
+  transition: fill .5s ease-in-out;
+  fill: #b0b0b0;
+}
+.screen-element-code-bottom:hover{
+  fill: #ff00ff;
+  animation: animateHeart .7s linear infinite;
+}
+.screen-element-code-bottom:not(:hover){
+fill: #b0b0b0;
+}

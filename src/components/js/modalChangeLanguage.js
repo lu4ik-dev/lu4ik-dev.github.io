@@ -3,6 +3,7 @@ import React from 'react';
 const ModalChangeLanguage = ({ onSelectLanguage, languageData }) => {
   const handleLanguageChange = (lang) => {
     onSelectLanguage(lang);
+    localStorage.setItem('LSLanguage', lang);
   };
 
   return (

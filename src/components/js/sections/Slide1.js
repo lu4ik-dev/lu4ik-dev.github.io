@@ -2,8 +2,33 @@ import React, { useEffect, useRef } from 'react';
 import SpanTitles from '../SpanTitles';
 import ImageComputer from '../../images/computer';
 import '../../css/slide1.css';
-
+import RandomFacts from '../randomFacts';
 const Slide1 = ({ languageData }) => {
+  const showToast = () => {
+    const toast = document.querySelector('.toast');
+    const progress = document.querySelector('.progress');
+    toast.classList.add('active');
+    progress.classList.add('active');
+
+    const timer1 = setTimeout(() => {
+      // toast.classList.remove('active');
+    }, 5000);
+
+    const timer2 = setTimeout(() => {
+      progress.classList.remove('active');
+    }, 5300);
+
+    const closeIcon = document.querySelector('.close');
+    closeIcon.addEventListener('click', () => {
+      toast.classList.remove('active');
+      setTimeout(() => {
+        progress.classList.remove('active');
+      }, 300);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    });
+  };
+
   const greetingTitleRef = useRef(null);
   const complectNameRef = useRef(null);
 
@@ -55,7 +80,11 @@ const Slide1 = ({ languageData }) => {
             <i class="fs-4 mx-2 my-auto fa fa-language" aria-hidden="true"></i>
           </button>
         </div>
+        <div class="py-5 end-0 ">
+          <RandomFacts />
+        </div>
       </div>
+
       <div class="container pt-5">
         <div class="row align-items-center mb-5">
           <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0">
@@ -67,7 +96,7 @@ const Slide1 = ({ languageData }) => {
               <a class="btn btn-primary me-2 mb-2 mb-sm-0" href="#">
                 About me?
               </a>
-              <a class="btn btn-outline-secondary mb-2 mb-sm-0" href="#">
+              <a class="btn btn-outline-secondary mb-2 mb-sm-0" href="#" onClick={showToast}>
                 coffee
               </a>
             </div>
