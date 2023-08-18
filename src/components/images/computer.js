@@ -1,6 +1,9 @@
 import React from 'react';
 
 function ImageComputer() {
+  const handleSvgClick = () => {
+    console.log('SVG clicked!');
+  };
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,6 +11,7 @@ function ImageComputer() {
       width="600"
       height="600"
       version="1.1"
+      id="decorationLaptop"
       viewBox="0 0 600 600"
       xmlSpace="preserve">
       <defs>
@@ -5000,6 +5004,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2500)">
                         <g transform="translate(193.247 232.73)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5014,6 +5019,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2504)">
                         <g transform="translate(205.975 225.38)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5028,6 +5034,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2508)">
                         <g transform="translate(218.704 218.032)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5042,6 +5049,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2512)">
                         <g transform="translate(231.432 210.684)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5056,6 +5064,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2516)">
                         <g transform="translate(244.16 203.334)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5070,6 +5079,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2520)">
                         <g transform="translate(256.898 195.98)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5084,6 +5094,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2524)">
                         <g transform="translate(269.627 188.632)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5098,6 +5109,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2528)">
                         <g transform="translate(282.356 181.283)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5112,6 +5124,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2532)">
                         <g transform="translate(295.085 173.934)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5126,6 +5139,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2536)">
                         <g transform="translate(307.813 166.585)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5140,6 +5154,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2540)">
                         <g transform="translate(320.55 159.231)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5154,6 +5169,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2544)">
                         <g transform="translate(333.279 151.882)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5168,6 +5184,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2548)">
                         <g transform="translate(346.007 144.533)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5182,6 +5199,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2552)">
                         <g transform="translate(358.736 137.185)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5196,6 +5214,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2556)">
                         <g transform="translate(185.862 228.439)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5210,6 +5229,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2560)">
                         <g transform="translate(198.59 221.09)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5224,6 +5244,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2564)">
                         <g transform="translate(211.32 213.741)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5238,6 +5259,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2568)">
                         <g transform="translate(224.049 206.393)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5252,6 +5274,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2572)">
                         <g transform="translate(236.777 199.043)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5266,6 +5289,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2576)">
                         <g transform="translate(249.513 191.69)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5280,6 +5304,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2580)">
                         <g transform="translate(262.243 184.34)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5294,6 +5319,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2584)">
                         <g transform="translate(274.971 176.991)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5308,6 +5334,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2588)">
                         <g transform="translate(287.7 169.643)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5322,6 +5349,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2592)">
                         <g transform="translate(300.428 162.294)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5336,6 +5364,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2596)">
                         <g transform="translate(313.166 154.94)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5350,6 +5379,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2600)">
                         <g transform="translate(325.894 147.59)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5364,6 +5394,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2604)">
                         <g transform="translate(351.352 132.894)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5378,7 +5409,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2608)">
                         <g transform="translate(185.935 215.44)">
                           <path
-                            fill="#b0b0b0"
+                            class="keyboard-hover-element"
                             fillOpacity="1"
                             fillRule="nonzero"
                             stroke="none"
@@ -5392,6 +5423,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2612)">
                         <g transform="translate(200.136 207.241)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5406,6 +5438,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2616)">
                         <g transform="translate(212.864 199.893)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5420,6 +5453,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2620)">
                         <g transform="translate(225.593 192.544)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5434,6 +5468,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2624)">
                         <g transform="translate(238.33 185.19)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5448,6 +5483,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2628)">
                         <g transform="translate(251.058 177.84)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5462,6 +5498,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2632)">
                         <g transform="translate(263.787 170.492)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5476,6 +5513,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2636)">
                         <g transform="translate(276.516 163.144)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5490,6 +5528,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2640)">
                         <g transform="translate(289.245 155.794)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5504,6 +5543,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2644)">
                         <g transform="translate(301.982 148.44)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5518,6 +5558,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2648)">
                         <g transform="translate(314.71 141.092)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5532,6 +5573,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2652)">
                         <g transform="translate(167.095 213.361)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5546,6 +5588,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2656)">
                         <g transform="translate(180.13 205.835)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5560,6 +5603,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2660)">
                         <g transform="translate(192.86 198.486)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5574,6 +5618,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2664)">
                         <g transform="translate(205.588 191.137)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5588,6 +5633,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2668)">
                         <g transform="translate(218.316 183.788)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5602,6 +5648,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2672)">
                         <g transform="translate(231.045 176.44)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5616,6 +5663,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2676)">
                         <g transform="translate(243.782 169.086)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5630,6 +5678,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2680)">
                         <g transform="translate(256.511 161.736)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5644,6 +5693,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2684)">
                         <g transform="translate(269.24 154.388)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5658,6 +5708,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2688)">
                         <g transform="translate(281.969 147.04)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5672,6 +5723,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2692)">
                         <g transform="translate(294.697 139.69)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5686,6 +5738,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2696)">
                         <g transform="translate(307.425 132.34)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5700,6 +5753,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2700)">
                         <g transform="translate(340.168 126.394)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5714,6 +5768,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2704)">
                         <g transform="translate(152.31 208.94)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5728,6 +5783,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2708)">
                         <g transform="translate(165.039 201.592)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5742,6 +5798,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2712)">
                         <g transform="translate(177.767 194.243)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5756,6 +5813,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2716)">
                         <g transform="translate(190.496 186.894)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5770,6 +5828,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2720)">
                         <g transform="translate(203.225 179.545)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5784,6 +5843,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2724)">
                         <g transform="translate(215.962 172.191)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5798,6 +5858,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2728)">
                         <g transform="translate(228.691 164.842)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5812,6 +5873,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2732)">
                         <g transform="translate(241.42 157.493)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5826,6 +5888,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2736)">
                         <g transform="translate(254.148 150.144)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5840,6 +5903,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2740)">
                         <g transform="translate(266.877 142.795)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5854,6 +5918,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2744)">
                         <g transform="translate(279.614 135.441)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5868,6 +5933,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2748)">
                         <g transform="translate(292.342 128.093)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5882,6 +5948,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2752)">
                         <g transform="translate(317.8 113.394)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5896,6 +5963,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2756)">
                         <g transform="translate(141.126 202.441)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5910,6 +5978,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2760)">
                         <g transform="translate(153.854 195.092)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5924,6 +5993,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2764)">
                         <g transform="translate(166.584 187.743)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5938,6 +6008,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2768)">
                         <g transform="translate(179.312 180.394)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5952,6 +6023,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2772)">
                         <g transform="translate(242.964 143.644)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5966,6 +6038,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2776)">
                         <g transform="translate(255.693 136.296)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5980,6 +6053,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2780)">
                         <g transform="translate(268.43 128.942)">
                           <path
+                            class="keyboard-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -5994,6 +6068,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2784)">
                         <g transform="translate(281.159 121.593)">
                           <path
+                            class="keyboard-hover-arrow-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -6008,6 +6083,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2788)">
                         <g transform="translate(293.887 114.244)">
                           <path
+                            class="keyboard-hover-arrow-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -6022,6 +6098,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2792)">
                         <g transform="translate(288.989 111.397)">
                           <path
+                            class="keyboard-hover-arrow-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -6036,6 +6113,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2796)">
                         <g transform="translate(306.616 106.895)">
                           <path
+                            class="keyboard-hover-arrow-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -6050,6 +6128,7 @@ function ImageComputer() {
                       <g clipPath="url(#clipPath2800)">
                         <g transform="translate(230.975 125.534)">
                           <path
+                            class="touchpad-hover-element"
                             fill="#b0b0b0"
                             fillOpacity="1"
                             fillRule="nonzero"
@@ -6119,6 +6198,7 @@ function ImageComputer() {
                       fillOpacity="1"
                       fillRule="nonzero"
                       stroke="none"
+                      onClick={handleSvgClick}
                       d="M0 0l-41.326 23.859c-1.032.597-1.865.121-1.869-1.065l-.112-39.376c-.003-1.176.825-2.62 1.858-3.216l41.325-23.86c1.032-.595 1.866-.111 1.869 1.066l.111 39.375C1.86-2.03 1.032-.596 0 0"></path>
                   </g>
                 </g>
@@ -6180,6 +6260,7 @@ function ImageComputer() {
                                   <g clipPath="url(#clipPath3882)">
                                     <g transform="translate(324.28 319.095)">
                                       <path
+                                        class="circular-digram-pink"
                                         fill="#b0b0b0"
                                         fillOpacity="1"
                                         fillRule="nonzero"
@@ -6208,6 +6289,7 @@ function ImageComputer() {
                                   <g clipPath="url(#clipPath3890)">
                                     <g transform="translate(360.039 298.45)">
                                       <path
+                                        class="circular-digram-pink"
                                         fill="#b0b0b0"
                                         fillOpacity="1"
                                         fillRule="nonzero"

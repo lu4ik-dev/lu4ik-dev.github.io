@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import SpanTitles from '../SpanTitles';
 import ImageComputer from '../../images/computer';
+import '../../css/slide1.css';
+
 const Slide1 = ({ languageData }) => {
   const greetingTitleRef = useRef(null);
   const complectNameRef = useRef(null);
@@ -24,7 +26,7 @@ const Slide1 = ({ languageData }) => {
             href="https://lu4ik-dev.github.io/"
             class="d-flex align-items-center ms-lg-3 mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
             <img src="assets/elis.png" class="logo-img my-auto" alt="logo" />
-            <h1 class="fs-4 logo-add-text text-light my-auto" ref={complectNameRef}>
+            <h1 class="fs-4 logo-add-text text-light my-auto sm-d-block" ref={complectNameRef}>
               <span>D</span>
               <span>m</span>
               <span>i</span>
@@ -54,39 +56,29 @@ const Slide1 = ({ languageData }) => {
           </button>
         </div>
       </div>
-      <div class="container pt-5" data-path="0.1">
-        <div class="row align-items-center mb-5" data-path="0.1.0">
-          <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0" data-path="0.1.0.0">
-            <h1
-              class="display-4 fw-bold mb-5"
-              data-config-id="header"
-              data-path="0.1.0.0.0"
-              ref={greetingTitleRef}></h1>
-            <p class="lead mb-5" data-config-id="desc" data-path="0.1.0.0.1">
+      <div class="container pt-5">
+        <div class="row align-items-center mb-5">
+          <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0">
+            <h1 class="display-4 text-light fw-bold mb-5" ref={greetingTitleRef}></h1>
+            <p class="lead text-light mb-5" data-config-id="desc">
               {languageData.greetingDescription}
             </p>
-            <div class="d-flex flex-wrap" data-path="0.1.0.0.2">
-              <a
-                class="btn btn-primary me-2 mb-2 mb-sm-0"
-                href="#"
-                data-config-id="hero-primary-action"
-                data-path="0.1.0.0.2.0">
-                Track your performance
+            <div class="d-flex flex-wrap">
+              <a class="btn btn-primary me-2 mb-2 mb-sm-0" href="#">
+                About me?
               </a>
-              <a
-                class="btn btn-outline-secondary mb-2 mb-sm-0"
-                href="#"
-                data-config-id="hero-secondary-action"
-                data-path="0.1.0.0.2.1">
-                Learn more
+              <a class="btn btn-outline-secondary mb-2 mb-sm-0" href="#">
+                coffee
               </a>
             </div>
           </div>
-          <div class="col-12 col-lg-6 offset-lg-1" data-path="0.1.0.1">
-            <ImageComputer />
+          <div class="col-12 col-lg-6 offset-lg-1">
+            <div>
+              <ImageComputer />
+            </div>
           </div>
         </div>
-        <div class="text-center d-none d-lg-block" data-path="0.1.1"></div>
+        <div class="text-center d-none d-lg-block"></div>
       </div>
     </header>
   );

@@ -89,6 +89,8 @@ h1 span:hover {
     transition: all .5s ease-out;
     animation: shrink .6s ease-out;
   }
+
+
   
 
 @keyframes shrink {
@@ -113,6 +115,7 @@ h1 span:hover {
       }
     
 }
+
 
 .btn-outline-light{
     color: #dfdfdf;
@@ -223,7 +226,7 @@ body{
   color: #8c4caf;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   .fab.fa-js{
     color:gold;
@@ -317,8 +320,3 @@ body{
   animation: shrinkXY .6s ease-out;
 }
 
-
-svg {
- height: 70vmin;
-
-}

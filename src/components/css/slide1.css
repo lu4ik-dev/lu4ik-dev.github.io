@@ -1,0 +1,91 @@
+
+#decorationLaptop {
+    background-color:hsla(0,100%,50%,0);
+    background-image:
+    radial-gradient(at 59% 56%, hsla(340, 55%, 53%, 0.7) 0px, transparent 50%),
+    radial-gradient(at 42% 45%, hsla(313, 87%, 59%, 0.6) 0px, transparent 50%),
+    radial-gradient(at 52% 45%, hsla(242, 100%, 70%, 0.918) 0px, transparent 50%);
+    height: 70vmin;
+    transition: all .5s ease-out;
+    animation: animateLaptop 3s ease-out infinite;
+}
+
+
+@keyframes animateLaptop {
+  0% {
+    transform: scale(1) translateY(1px); 
+  }
+  50% {
+    transform: scale(1.01) translateY(5px); 
+  }
+  100% {
+    transform: scale(1) translateY(1px); 
+  }
+}
+
+.keyboard-hover-element {
+    fill: #b0b0b0;
+    transition: fill .2s ease-in-out;
+  }
+  
+  .keyboard-hover-element:hover {
+    fill: #ffff00;
+  }
+
+  .keyboard-hover-element:not(:hover) {
+    fill: #b0b0b0;
+  }
+
+.touchpad-hover-element{
+    transition: fill .2s ease-in-out;
+    fill: #b0b0b0;
+    }
+.touchpad-hover-element:hover{
+    fill: #8b8b8b;
+    }
+.touchpad-hover-element:not(:hover){
+    fill: #b0b0b0;
+    }
+
+
+.keyboard-hover-arrow-element{
+    transition: fill .2s ease-in-out;
+    fill: #b0b0b0;
+}
+.keyboard-hover-arrow-element:hover{
+fill: #ff6600;
+}
+.keyboard-hover-arrow-element:not(:hover){
+fill: #b0b0b0;
+}
+
+.circular-digram-pink{
+    transition: fill .5s ease-in-out;
+    fill: #b0b0b0;
+}
+.circular-digram-pink:hover{
+    fill: #ff00ff;
+}
+.circular-digram-pink:not(:hover){
+fill: #b0b0b0;
+}
+
+.decoration-bottom-animate{
+transition: all .5s ease-out;
+animation: animateBottomLaptop 5s linear infinite;
+}
+
+
+
+@keyframes animateBottomLaptop {
+0% {
+transform: scale(1) translateY(1px); 
+}
+50% {
+transform: scale(1.01) translateY(10px); 
+}
+100% {
+transform: scale(1) translateY(1px); 
+}
+}
+
