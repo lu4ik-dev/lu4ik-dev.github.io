@@ -3,15 +3,38 @@ import SpanTitles from '../SpanTitles';
 import ImageComputer from '../../images/computer';
 import '../../css/slide1.css';
 import RandomFacts from '../randomFacts';
+import { fetchAndParseJSON } from '../changeLanguage';
+const jsonUrl =
+  'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/randomFacts.json';
+
 const Slide1 = ({ languageData }) => {
-  const showToast = () => {
+  function getRandomItem(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
+
+  const handleGetRandomFacts = async () => {
+    const data = await fetchAndParseJSON(jsonUrl);
+    if (data) {
+      const RandomFacts = getRandomItem(data[localStorage.getItem('LSLanguage')]);
+      showToast(RandomFacts);
+    }
+  };
+
+  const showToast = (text) => {
     const toast = document.querySelector('.toast');
     const progress = document.querySelector('.progress');
+    const title = document.getElementById('titleRandomFactsElement');
+    const description = document.getElementById('descriptionRandomFactsElement');
+    console.log(text);
     toast.classList.add('active');
     progress.classList.add('active');
 
+    title.textContent = languageData.TitleCoffeeText;
+    description.textContent = text;
+
     const timer1 = setTimeout(() => {
-      // toast.classList.remove('active');
+      toast.classList.remove('active');
     }, 5000);
 
     const timer2 = setTimeout(() => {
@@ -46,7 +69,7 @@ const Slide1 = ({ languageData }) => {
   return (
     <header class="bg-gradient-start vh-100">
       <div class="position-absolute w-100 py-3 mb-4">
-        <div class="container-fluid p-0 px-lg-2 d-flex flex-wrap justify-content-center">
+        <div class="container-fluid p-0 px-lg-2 d-flex flex-wrap justify-content-center opacity-hover-effect">
           <a
             href="https://lu4ik-dev.github.io/"
             class="d-flex align-items-center ms-lg-3 mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
@@ -96,7 +119,10 @@ const Slide1 = ({ languageData }) => {
               <a class="btn btn-primary me-2 mb-2 mb-sm-0" href="#">
                 About me?
               </a>
-              <a class="btn btn-outline-secondary mb-2 mb-sm-0" href="#" onClick={showToast}>
+              <a
+                class="btn btn-outline-secondary mb-2 mb-sm-0"
+                href="#"
+                onClick={handleGetRandomFacts}>
                 coffee
               </a>
             </div>

@@ -1,4 +1,3 @@
-// changeLanguage.js
 export async function fetchAndParseJSON(url) {
   try {
     const response = await fetch(url);
@@ -19,5 +18,6 @@ export function changeLanguage(selectedLang, data) {
     btnContactLabel: langData['btn-contact'],
     greetingTitle: langData['greeting-title'],
     greetingDescription: langData['greeting-description'],
+    titleCoffeeText: langData['title-coffee'],
   };
 }
