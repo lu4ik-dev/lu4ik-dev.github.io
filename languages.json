@@ -8,7 +8,8 @@
       "skills-title": "Знания и навыки",
       "skills-description": "ква ква ква ква",
       "greeting-title": "Привет! Я Front-end разработчик",
-      "greeting-description": "как же я люблю жареную картошечку.. и кофе. Теперь добавлю где нибудь на сайте кофе. Этого описания потом не будет, а кофе останется."
+      "greeting-description": "как же я люблю жареную картошечку.. и кофе. Теперь добавлю где нибудь на сайте кофе. Этого описания потом не будет, а кофе останется.",
+      "title-coffee": "Случайный факт от Коффи"
     },
     "english": {
       "greet": "hi",
@@ -19,6 +20,7 @@
       "skills-title": "Skills & Experience",
       "skills-description": "kva kva kva kva",
       "greeting-title": "Hi! I'm Front-end developer!",
-      "greeting-description": "description about me. maybe here was info about pet projects"
+      "greeting-description": "description about me. maybe here was info about pet projects",
+      "title-coffee": "Random fact by Coffee"
     }
   }

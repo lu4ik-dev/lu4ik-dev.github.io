@@ -17,6 +17,7 @@ function App() {
     btnContactLabel: '',
     greetingTitle: '',
     greetingDescription: '',
+    titleCoffeeText: '',
   });
 
   useEffect(() => {
