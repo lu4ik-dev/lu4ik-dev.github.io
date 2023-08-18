@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'; // Use HashRouter
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import './App.css';
@@ -39,7 +39,7 @@ function App() {
     <div>
       <ModalChangeLanguage onSelectLanguage={handleLanguageChange} languageData={languageData} />
 
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Sections languageData={languageData} />} />
           <Route path="/projects" element={<Projects slides={slidesData} />} />
