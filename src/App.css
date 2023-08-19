@@ -353,8 +353,19 @@ body{
 }
 
 .toast .toast-content{
-  color: rgb(231, 132, 86);
+  transition: all .5s ease-out;
+  color: rgb(255,0,255);
 }
+.toast .toast-content i:hover{
+  transition: all .3s ease-out;
+  background-color: rgb(158, 31, 158);
+}
+
+.toast .toast-content i:not(:hover){
+  transition: all .3s ease-out;
+  color: rgb(255,0,255);
+}
+
 
 .toast-content .message {
   display: flex;
@@ -370,7 +381,7 @@ body{
 
 .message .text.text-1 {
   font-weight: 600;
-  color: #7a7a7a;
+  color: rgb(255,0,255);
 }
 
 .toast .close {
@@ -394,6 +405,10 @@ body{
   width: 100%;
 
 }
+.progress{
+  
+  background-color: rgb(158, 31, 158);
+}
 
 .toast .progress:before {
   content: "";
@@ -402,7 +417,7 @@ body{
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: #4070f4;
+  background-color:  rgb(255,0,255);
 }
 
 .progress.active:before {

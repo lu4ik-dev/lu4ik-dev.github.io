@@ -11,7 +11,7 @@
 
 
 .keyboard-hover-element {
-    fill: #b0b0b0;
+    fill: rgb(100, 10, 209);
     transition: fill .2s ease-in-out;
   }
   
@@ -20,35 +20,35 @@
   }
 
   .keyboard-hover-element:not(:hover) {
-    fill: #b0b0b0;
+    fill: rgb(100, 10, 209);
   }
 
 .touchpad-hover-element{
     transition: fill .2s ease-in-out;
-    fill: #b0b0b0;
+    fill: rgb(100, 10, 209);
     }
 .touchpad-hover-element:hover{
-    fill: #8b8b8b;
+    fill: rgb(78, 10, 161);
     }
 .touchpad-hover-element:not(:hover){
-    fill: #b0b0b0;
+    fill: rgb(100, 10, 209);
     }
 
 
 .keyboard-hover-arrow-element{
     transition: fill .2s ease-in-out;
-    fill: #b0b0b0;
+    fill: rgb(100, 10, 209);
 }
 .keyboard-hover-arrow-element:hover{
 fill: #ff6600;
 }
 .keyboard-hover-arrow-element:not(:hover){
-fill: #b0b0b0;
+fill: rgb(100, 10, 209);
 }
 
 .circular-digram-pink{
     transition: fill .5s ease-in-out;
-    fill: #b0b0b0;
+    fill: rgb(59,16,112);
     
 }
 .circular-digram-pink:hover{
@@ -57,7 +57,7 @@ fill: #b0b0b0;
 
 }
 .circular-digram-pink:not(:hover){
-fill: #b0b0b0;
+fill: rgb(59,16,112);
 }
 
 @keyframes animateHeart {
@@ -92,7 +92,7 @@ transform: scale(1) translateY(1px);
 
   .screen-element-question-mark{
     transition: fill .5s ease-in-out;
-    fill: #b0b0b0;
+    fill: rgb(123, 78, 179);
   }
   .screen-element-question-mark:hover{
     fill: #ff00ff;
@@ -100,30 +100,30 @@ transform: scale(1) translateY(1px);
 
   }
   .screen-element-question-mark:not(:hover){
-    fill: #b0b0b0;
+    fill: rgb(123, 78, 179);
   }
   
 
 .screen-element-code-left{
   transition: fill .5s ease-in-out;
-  fill: #b0b0b0;
+  fill:rgb(123, 78, 179);
 }
 .screen-element-code-left:hover{
   fill: #ff00ff;
   animation: animateHeart .7s linear infinite;
 }
 .screen-element-code-left:not(:hover){
-  fill: #b0b0b0;
+  fill:rgb(123, 78, 179);
 }
 
 .screen-element-code-bottom{
   transition: fill .5s ease-in-out;
-  fill: #b0b0b0;
+  fill: rgb(123, 78, 179);
 }
 .screen-element-code-bottom:hover{
   fill: #ff00ff;
   animation: animateHeart .7s linear infinite;
 }
 .screen-element-code-bottom:not(:hover){
-fill: #b0b0b0;
+fill: rgb(123, 78, 179);
 }

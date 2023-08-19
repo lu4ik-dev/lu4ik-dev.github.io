@@ -1,30 +1,54 @@
 import React from 'react';
+import '../../css/slide4.css';
 
 const Slide4 = ({ languageData }) => (
   <div class="bg-primary py-5 vh-100">
     <div class="container px-5">
-      <div class="row gx-5 align-items-center justify-content-center">
-        <div class="col-lg-8 col-xl-7 col-xxl-6">
-          <div class="my-5 text-center text-xl-start">
-            <h1 class="display-5 fw-bolder text-white mb-2"></h1>
-            <p class="fw-normal text-white-50 mb-4"></p>
-            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-              <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="#features">
-                Get Started
-              </a>
-              <a class="btn btn-outline-light btn-lg px-4" href="#!">
-                Learn More
-              </a>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+        <div class="carousel-inner">
+          <div class="item carousel-item active">
+            <div class="row">
+              {''}
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon">
+                    <i class="fa fa-heart-o"></i>
+                  </span>
+                  <div class="img-box">
+                    <img src="/examples/images/products/ipad.jpg" class="img-fluid" alt="" />
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Title</h4>
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <i class="fa fa-star"></i>
+                        </li>
+
+                        <li class="list-inline-item">
+                          <i class="fa fa-star-o"></i>
+                        </li>
+                      </ul>
+                    </div>
+                    <p class="item-price">
+                      <b>description</b>
+                    </p>
+                    <a href="#" class="btn btn-primary">
+                      Link
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {''}
             </div>
           </div>
         </div>
-        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-          <img
-            class="img-fluid rounded-3 my-5"
-            src="https://dummyimage.com/600x400/343a40/6c757d"
-            alt="..."
-          />
-        </div>
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+        </a>
       </div>
     </div>
   </div>

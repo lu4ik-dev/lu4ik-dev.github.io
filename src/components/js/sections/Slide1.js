@@ -8,6 +8,10 @@ const jsonUrl =
   'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/randomFacts.json';
 
 const Slide1 = ({ languageData }) => {
+  const coffeeButton = useRef(null);
+  const greetingTitleRef = useRef(null);
+  const complectNameRef = useRef(null);
+
   function getRandomItem(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
@@ -22,19 +26,21 @@ const Slide1 = ({ languageData }) => {
   };
 
   const showToast = (text) => {
+    const coffeeButtonElement = coffeeButton.current;
     const toast = document.querySelector('.toast');
     const progress = document.querySelector('.progress');
     const title = document.getElementById('titleRandomFactsElement');
     const description = document.getElementById('descriptionRandomFactsElement');
-    console.log(text);
+    console.log(`${languageData.titleCoffeeText}; ${text}`);
     toast.classList.add('active');
     progress.classList.add('active');
-
-    title.textContent = languageData.TitleCoffeeText;
+    coffeeButtonElement.disabled = true;
+    title.textContent = languageData.titleCoffeeText;
     description.textContent = text;
 
     const timer1 = setTimeout(() => {
       toast.classList.remove('active');
+      coffeeButtonElement.disabled = false;
     }, 5000);
 
     const timer2 = setTimeout(() => {
@@ -44,6 +50,7 @@ const Slide1 = ({ languageData }) => {
     const closeIcon = document.querySelector('.close');
     closeIcon.addEventListener('click', () => {
       toast.classList.remove('active');
+      coffeeButtonElement.disabled = false;
       setTimeout(() => {
         progress.classList.remove('active');
       }, 300);
@@ -51,9 +58,6 @@ const Slide1 = ({ languageData }) => {
       clearTimeout(timer2);
     });
   };
-
-  const greetingTitleRef = useRef(null);
-  const complectNameRef = useRef(null);
 
   useEffect(() => {
     const greetingTitleElement = greetingTitleRef.current;
@@ -119,12 +123,12 @@ const Slide1 = ({ languageData }) => {
               <a class="btn btn-primary me-2 mb-2 mb-sm-0" href="#">
                 About me?
               </a>
-              <a
+              <button
                 class="btn btn-outline-secondary mb-2 mb-sm-0"
-                href="#"
+                ref={coffeeButton}
                 onClick={handleGetRandomFacts}>
                 coffee
-              </a>
+              </button>
             </div>
           </div>
           <div class="col-12 col-lg-6 offset-lg-1">
