@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import SpanTitles from '../SpanTitles';
+import '../../css/slide2.css';
 const Slide2 = ({ languageData }) => {
   const complectNameRef = useRef(null);
 
@@ -12,7 +13,7 @@ const Slide2 = ({ languageData }) => {
   }, [languageData]);
 
   return (
-    <div class="bg-primary py-5 vh-100">
+    <div class="bg-gradient-second py-5 vh-100">
       <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
           <div class="col-lg-8 col-xl-7 col-xxl-6">

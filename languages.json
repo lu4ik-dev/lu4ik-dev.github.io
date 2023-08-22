@@ -9,7 +9,9 @@
       "skills-description": "ква ква ква ква",
       "greeting-title": "Привет! Я Front-end разработчик",
       "greeting-description": "как же я люблю жареную картошечку.. и кофе. Теперь добавлю где нибудь на сайте кофе. Этого описания потом не будет, а кофе останется.",
-      "title-coffee": "Случайный факт от Коффи"
+      "title-coffee": "Случайный факт от Коффи",
+      "first-start-text": "Внимание! Это Бета-версия Веб-Сайта \"Смирнов Дмитрий | Портфолио\", предназначенная для тестирования. Она не отображает финального качества продукта .Спасибо за понимание и поддержку .Удачи!",
+      "first-start-title": "Внимание! Это Бета-версия!"
     },
     "english": {
       "greet": "hi",
@@ -21,6 +23,8 @@
       "skills-description": "kva kva kva kva",
       "greeting-title": "Hi! I'm Front-end developer!",
       "greeting-description": "description about me. maybe here was info about pet projects",
-      "title-coffee": "Random fact by Coffee"
+      "title-coffee": "Random fact by Coffee",
+      "first-start-text": "Attention! This is the Beta version of the website \"Dmitry Smirnov | Portfolio,\" intended for testing purposes. It does not reflect the final quality of the product. Thank you for your understanding and support. Good luck!",
+      "first-start-title": "Attention! This is the Beta version!"
     }
   }

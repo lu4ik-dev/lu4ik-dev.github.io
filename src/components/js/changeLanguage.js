@@ -19,5 +19,7 @@ export function changeLanguage(selectedLang, data) {
     greetingTitle: langData['greeting-title'],
     greetingDescription: langData['greeting-description'],
     titleCoffeeText: langData['title-coffee'],
+    firstStartText: langData['first-start-text'],
+    firstStartTitle: langData['first-start-title'],
   };
 }

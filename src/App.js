@@ -18,6 +18,8 @@ function App() {
     greetingTitle: '',
     greetingDescription: '',
     titleCoffeeText: '',
+    firstStartText: '',
+    firstStartTitle: '',
   });
 
   useEffect(() => {

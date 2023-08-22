@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import SpanTitles from '../SpanTitles';
+import '../../css/slide3.css';
+
 const Slide3 = ({ languageData }) => {
   const skillsTitleLabelRef = useRef(null);
 
@@ -12,7 +14,7 @@ const Slide3 = ({ languageData }) => {
   }, [languageData]);
 
   return (
-    <div class="bg-dark py-5 vh-100">
+    <div class="bg-gradient-third py-5 vh-100">
       <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
           <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}>

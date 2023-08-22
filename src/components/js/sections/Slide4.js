@@ -17,9 +17,9 @@ const Slide4 = ({ languageData }) => {
 
     fetchData();
   }, []);
-
+  const selectedLanguage = localStorage.getItem('LSLanguage');
   return (
-    <div class="bg-primary py-5 vh-100">
+    <div class="bg-gradient-fourth py-5 vh-100">
       <div class="container px-5">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
           <div class="carousel-inner">
@@ -36,7 +36,7 @@ const Slide4 = ({ languageData }) => {
                         <img src={projectInfo.image} class="img-fluid" alt="" />
                       </div>
                       <div class="thumb-content">
-                        <h4>{projectInfo.title}</h4>
+                        <h4>{projectInfo[selectedLanguage].title}</h4>
                         <div class="star-rating">
                           <ul class="list-inline">
                             <li class="list-inline-item">
@@ -49,10 +49,10 @@ const Slide4 = ({ languageData }) => {
                           </ul>
                         </div>
                         <p class="item-price">
-                          <b>{projectInfo.title}</b>
+                          <b>{projectInfo[selectedLanguage].subTitle}</b>
                         </p>
-                        <a href="#" class="btn btn-primary">
-                          Link
+                        <a href={projectInfo.github} class="btn btn-primary">
+                          Link Github
                         </a>
                       </div>
                     </div>
