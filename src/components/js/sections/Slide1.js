@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SpanTitles from '../SpanTitles';
 import ImageComputer from '../../images/computer';
 import '../../css/slide1.css';
@@ -8,10 +8,7 @@ const jsonUrl =
   'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/randomFacts.json';
 
 const Slide1 = ({ languageData }) => {
-  const coffeeButton = useRef(null);
-  const greetingTitleRef = useRef(null);
-  const complectNameRef = useRef(null);
-
+  const [isCoffeeClicking, setIsCoffeeClicking] = useState(false);
   function getRandomItem(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
@@ -26,7 +23,6 @@ const Slide1 = ({ languageData }) => {
   };
 
   const showToast = (text) => {
-    const coffeeButtonElement = coffeeButton.current;
     const toast = document.querySelector('.toast');
     const progress = document.querySelector('.progress');
     const title = document.getElementById('titleRandomFactsElement');
@@ -34,30 +30,35 @@ const Slide1 = ({ languageData }) => {
     console.log(`${languageData.titleCoffeeText}; ${text}`);
     toast.classList.add('active');
     progress.classList.add('active');
-    coffeeButtonElement.disabled = true;
+    setIsCoffeeClicking(true);
+
     title.textContent = languageData.titleCoffeeText;
     description.textContent = text;
 
     const timer1 = setTimeout(() => {
       toast.classList.remove('active');
-      coffeeButtonElement.disabled = false;
+      setIsCoffeeClicking(false);
     }, 5000);
 
     const timer2 = setTimeout(() => {
       progress.classList.remove('active');
+      setIsCoffeeClicking(false);
     }, 5300);
 
     const closeIcon = document.querySelector('.close');
     closeIcon.addEventListener('click', () => {
       toast.classList.remove('active');
-      coffeeButtonElement.disabled = false;
       setTimeout(() => {
         progress.classList.remove('active');
+        setIsCoffeeClicking(false);
       }, 300);
       clearTimeout(timer1);
       clearTimeout(timer2);
     });
   };
+
+  const greetingTitleRef = useRef(null);
+  const complectNameRef = useRef(null);
 
   useEffect(() => {
     const greetingTitleElement = greetingTitleRef.current;
@@ -115,7 +116,7 @@ const Slide1 = ({ languageData }) => {
       <div class="container pt-5">
         <div class="row align-items-center mb-5">
           <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0">
-            <h1 class="display-4 text-light fw-bold mb-5" ref={greetingTitleRef}></h1>
+            <h1 class="display-4 text-light fw-bold mb-5 fs-1" ref={greetingTitleRef}></h1>
             <p class="lead text-light mb-5" data-config-id="desc">
               {languageData.greetingDescription}
             </p>
@@ -125,8 +126,9 @@ const Slide1 = ({ languageData }) => {
               </a>
               <button
                 class="btn btn-outline-secondary mb-2 mb-sm-0"
-                ref={coffeeButton}
-                onClick={handleGetRandomFacts}>
+                href="#"
+                onClick={handleGetRandomFacts}
+                disabled={isCoffeeClicking}>
                 coffee
               </button>
             </div>

@@ -7,6 +7,7 @@
     radial-gradient(at 52% 45%, hsla(242, 100%, 70%, 0.918) 0px, transparent 50%);
     height: 70vmin;
     transition: all .5s ease-out;
+    transform: scale(110%);
 }
 
 
