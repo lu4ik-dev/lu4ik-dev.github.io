@@ -7,12 +7,8 @@ const RandomFacts = () => {
         <i class="fas fa-coffee fs-4"></i>
 
         <div class="message">
-          <span class="text text-1" id="titleRandomFactsElement">
-            коньяк
-          </span>
-          <span class="text text-2" id="descriptionRandomFactsElement">
-            скоро тут будут факты
-          </span>
+          <span class="text text-1" id="titleRandomFactsElement"></span>
+          <span class="text text-2" id="descriptionRandomFactsElement"></span>
         </div>
       </div>
       <i class="fa-solid fa-xmark close"></i>
