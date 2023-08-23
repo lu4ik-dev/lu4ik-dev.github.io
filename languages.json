@@ -34,41 +34,5 @@
       "title-coffee": "Random fact by Coffee",
       "first-start-text": "Attention! This is the Beta version of the website \"Dmitry Smirnov | Portfolio,\" intended for testing purposes. It does not reflect the final quality of the product. Thank you for your understanding and support. Good luck!",
       "first-start-title": "Attention! This is the Beta version!"
-    },
-    "japanese": {
-      "greet": "こんにちは",
-      "complectName": "ドミトリ・スミルノフ",
-      "btn": [{
-        "btn-contact": "お問い合わせ",
-        "btn-about-me": "私について",
-        "btn-secondary": "コーヒー？"
-      }],
-      "select-lang": "言語を選択してください",
-      "about-me": "このウェブページを開発中",
-      "skills-title": "スキルと経験",
-      "skills-description": "クワ クワ クワ クワ",
-      "greeting-title": "こんにちは！私はフルスタック開発者です",
-      "greeting-description": "私についての説明。おそらくここにはプロジェクトに関する情報がありました。",
-      "title-coffee": "コーヒーによるランダムな事実",
-      "first-start-text": "注意！これはウェブサイト「ドミトリ・スミルノフ | ポートフォリオ」のベータ版です。テストのために使用されます。最終的な品質を反映していません。ご理解とサポート、ありがとうございます。幸運を祈ります！",
-      "first-start-title": "注意！これはベータ版です！"
-    },
-    "chinese": {
-      "greet": "你好",
-      "complectName": "德米特里·斯米尔诺夫",
-      "btn": [{
-        "btn-contact": "联系方式",
-        "btn-about-me": "关于我",
-        "btn-secondary": "喝咖啡？"
-      }],
-      "select-lang": "选择您的语言",
-      "about-me": "开发此页面",
-      "skills-title": "技能与经验",
-      "skills-description": "咕噜咕噜咕噜",
-      "greeting-title": "你好！我是全栈开发者",
-      "greeting-description": "关于我和可能的项目信息。",
-      "title-coffee": "咖啡随机事实",
-      "first-start-text": "注意！这是网站\"德米特里·斯米尔诺夫 | 个人资料\"的测试版本，仅用于测试目的。它不反映最终产品的质量。感谢您的理解和支持。祝你好运！",
-      "first-start-title": "注意！这是测试版本！"
     }
   }

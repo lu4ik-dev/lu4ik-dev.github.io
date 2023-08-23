@@ -434,3 +434,19 @@ body{
   transition: all .3s ease-out;
   opacity: 1;
 }
+
+.btn-outline-secondary{
+  color: #7c6477;
+  border-color: #7c6477;
+}
+
+.btn-outline-secondary:hover{
+  background-color: #7c6477;
+  border-color: #7c6477;
+}
+.btn-outline-secondary:disabled{
+  color: white;
+  background-color: #7c64778c;
+  border-color: #7c6477;
+}
+

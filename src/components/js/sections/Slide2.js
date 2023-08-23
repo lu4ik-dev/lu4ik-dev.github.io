@@ -3,13 +3,15 @@ import SpanTitles from '../SpanTitles';
 import '../../css/slide2.css';
 import Fullpage, { FullpageContext } from '@ap.cx/react-fullpage';
 const Slide2 = ({ languageData }) => {
-  const complectNameRef = useRef(null);
+  const aboutMeTitleRef = useRef(null);
+  const aboutMeDescriptionRef = useRef(null);
 
   useEffect(() => {
-    const complectNameElement = complectNameRef.current;
+    const aboutMeTitleElement = aboutMeTitleRef.current;
+    const aboutMeDescriptionElement = aboutMeDescriptionRef.current;
 
-    if (complectNameElement) {
-      SpanTitles(languageData.complectNameText, complectNameElement);
+    if (aboutMeTitleElement) {
+      SpanTitles(languageData.complectNameText, aboutMeTitleElement);
     }
   }, [languageData]);
 
@@ -19,10 +21,8 @@ const Slide2 = ({ languageData }) => {
         <div class="row gx-5 align-items-center justify-content-center">
           <div class="col-lg-8 col-xl-7 col-xxl-6">
             <div class="my-5 text-center text-xl-start">
-              <h1 class="display-5 fw-bolder text-white mb-2" ref={complectNameRef}></h1>
-              <h4 class="text-light mb-5">Full-stack Developer / Desktop Developer</h4>
-
-              <p class="fw-normal text-white-50 mb-4"></p>
+              <h1 class="display-5 fw-bolder text-white mb-2" ref={aboutMeTitleRef}></h1>
+              <h4 class="text-light mb-5" ref={aboutMeDescriptionRef}></h4>
               <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                 <FullpageContext.Consumer>
                   {(ctx) => (

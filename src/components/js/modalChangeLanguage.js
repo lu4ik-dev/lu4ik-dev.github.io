@@ -42,22 +42,6 @@ const ModalChangeLanguage = ({ onSelectLanguage, languageData }) => {
               <i className="fa fa-flag" aria-hidden="true"></i>
               <span className="ps-1">Russian</span>
             </button>
-            <button
-              className="btn btn-outline-light mx-2 my-2"
-              name="btn-change-lang"
-              onClick={() => handleLanguageChange('chinese')}
-              onPress={() => handleLanguageChange('chinese')}>
-              <i className="fa fa-flag" aria-hidden="true"></i>
-              <span className="ps-1">Chinese</span>
-            </button>
-            <button
-              className="btn btn-outline-light mx-2 my-2"
-              name="btn-change-lang"
-              onClick={() => handleLanguageChange('japanese')}
-              onPress={() => handleLanguageChange('japanese')}>
-              <i className="fa fa-flag" aria-hidden="true"></i>
-              <span className="ps-1">Japanese</span>
-            </button>
           </div>
         </div>
       </div>

@@ -1,14 +1,12 @@
 .visible-change-language {
-  transition: all .2s ease-in;
+  transition: transform .2s ease-in;
   transform: scale(100%);
 }
 
 .hidden-change-language {
-  transition: all .15s ease-in;
+  transition: transform .15s ease-in;
   transform: scale(0%);
 }
-
-
 
 .bg-gradient-start{
   background-color:  #212121;

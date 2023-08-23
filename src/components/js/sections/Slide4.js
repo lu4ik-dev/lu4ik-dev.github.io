@@ -51,7 +51,7 @@ const Slide4 = ({ languageData }) => {
                         <p class="item-price">
                           <b>{projectInfo[selectedLanguage].subTitle}</b>
                         </p>
-                        <a href={projectInfo.github} class="btn btn-primary">
+                        <a href={projectInfo.github} class="btn btn-outline-secondary">
                           Link Github
                         </a>
                       </div>
