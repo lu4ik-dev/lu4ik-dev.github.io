@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import SpanTitles from '../SpanTitles';
 import '../../css/slide3.css';
+import Fullpage, { FullpageContext } from '@ap.cx/react-fullpage';
 
 const Slide3 = ({ languageData }) => {
   const skillsTitleLabelRef = useRef(null);
@@ -34,9 +35,16 @@ const Slide3 = ({ languageData }) => {
             <i data-bs-toggle="tooltip" title="Git" class="fab fa-git"></i>
           </p>
           <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-            <a class="btn btn-outline-light btn-lg px-4 me-sm-3" href="projects">
-              View projects (in dev)
-            </a>
+            <FullpageContext.Consumer>
+              {(ctx) => (
+                <a
+                  class="btn btn-outline-light btn-lg px-4 me-sm-3"
+                  onClick={() => ctx.goto(ctx.slides[3], true)}
+                  onPress={() => ctx.goto(ctx.slides[3], true)}>
+                  View projects (in dev)
+                </a>
+              )}
+            </FullpageContext.Consumer>
           </div>
 
           <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center text-white fs-1"></div>

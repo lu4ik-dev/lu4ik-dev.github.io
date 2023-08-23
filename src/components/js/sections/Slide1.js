@@ -4,6 +4,8 @@ import ImageComputer from '../../images/computer';
 import '../../css/slide1.css';
 import RandomFacts from '../randomFacts';
 import { fetchAndParseJSON } from '../changeLanguage';
+import Fullpage, { FullpageContext } from '@ap.cx/react-fullpage';
+
 const jsonUrl =
   'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/randomFacts.json';
 
@@ -61,11 +63,17 @@ const Slide1 = ({ languageData }) => {
 
   const greetingTitleRef = useRef(null);
   const complectNameRef = useRef(null);
+  const contactButtonRef = useRef(null);
+  const textDescriptionRef = useRef(null);
+  const buttonAboutRef = useRef(null);
+  const buttonSecondaryRef = useRef(null);
 
   useEffect(() => {
     setIsTextVisible(false);
     const greetingTitleElement = greetingTitleRef.current;
     const complectNameElement = complectNameRef.current;
+    const textDescriptionElement = textDescriptionRef.current;
+    const contactButtonElement = contactButtonRef.current;
 
     setTimeout(() => {
       setIsTextVisible(true);
@@ -75,7 +83,13 @@ const Slide1 = ({ languageData }) => {
       if (complectNameElement) {
         SpanTitles(languageData.complectNameText, complectNameElement);
       }
-    }, 600);
+      if (textDescriptionElement) {
+        textDescriptionElement.textContent = languageData.greetingDescription;
+      }
+      if (contactButtonElement) {
+        contactButtonElement.textContent = languageData.btnContactLabel;
+      }
+    }, 400);
   }, [languageData]);
   return (
     <header class="bg-gradient-start vh-100">
@@ -85,7 +99,11 @@ const Slide1 = ({ languageData }) => {
             href="https://lu4ik-dev.github.io/"
             class="d-flex align-items-center ms-lg-3 mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
             <img src="assets/elis.png" class="logo-img my-auto" alt="logo" />
-            <h1 class="fs-4 logo-add-text text-light my-auto sm-d-block" ref={complectNameRef}>
+            <h1
+              className={`fs-4 logo-add-text text-light my-auto sm-d-block  ${
+                isTextVisible ? 'visible-change-language' : 'hidden-change-language'
+              }`}
+              ref={complectNameRef}>
               <span>D</span>
               <span>m</span>
               <span>i</span>
@@ -103,9 +121,13 @@ const Slide1 = ({ languageData }) => {
               <span>v</span>
             </h1>
           </a>
-          <a class="mx-2 py-2 my-auto btn btn-outline-light fw-bolder" href="#" id="btn-contact">
-            {languageData.btnContactLabel}
-          </a>
+          <a
+            className={`mx-2 py-2 my-auto btn btn-outline-light fw-bolder  ${
+              isTextVisible ? 'visible-change-language' : 'hidden-change-language'
+            }`}
+            href="#"
+            id="btn-contact"
+            ref={contactButtonRef}></a>
           <button
             type="button"
             class="btn btn-outline-light "
@@ -127,22 +149,34 @@ const Slide1 = ({ languageData }) => {
                 isTextVisible ? 'visible-change-language' : 'hidden-change-language'
               }`}
               ref={greetingTitleRef}></h1>
-            <p
-              className={`lead text-light mb-5 ${
+            <h4
+              className={` text-light mb-5 ${
                 isTextVisible ? 'visible-change-language' : 'hidden-change-language'
               }`}
-              data-config-id="desc">
-              {languageData.greetingDescription}
-            </p>
+              data-config-id="desc"
+              ref={textDescriptionRef}></h4>
             <div class="d-flex flex-wrap">
-              <a class="btn btn-outline-light me-2 mb-2 mb-sm-0" href="#">
-                About me?
-              </a>
+              <FullpageContext.Consumer>
+                {(ctx) => (
+                  <a
+                    className={`btn btn-outline-light me-2 mb-2 mb-sm-0  ${
+                      isTextVisible ? 'visible-change-language' : 'hidden-change-language'
+                    }`}
+                    ref={buttonAboutRef}
+                    onClick={() => ctx.goto(ctx.slides[1], true)}
+                    onPress={() => ctx.goto(ctx.slides[1], true)}>
+                    About me?
+                  </a>
+                )}
+              </FullpageContext.Consumer>
+
               <button
-                class="btn btn-outline-secondary mb-2 mb-sm-0"
-                href="#"
+                className={`btn btn-outline-secondary mb-2 mb-sm-0  ${
+                  isTextVisible ? 'visible-change-language' : 'hidden-change-language'
+                }`}
                 onClick={handleGetRandomFacts}
-                disabled={isCoffeeClicking}>
+                disabled={isCoffeeClicking}
+                ref={buttonSecondaryRef}>
                 Сoffee?
               </button>
             </div>
