@@ -15,7 +15,7 @@ export function changeLanguage(selectedLang, data) {
     complectNameText: langData['complectName'],
     skillsTitleText: langData['skills-title'],
     selectLangLabel: langData['select-lang'],
-    buttonsText: langData['btn-contact']['btn'],
+    buttonsText: langData['btn'][0],
     greetingTitle: langData['greeting-title'],
     greetingDescription: langData['greeting-description'],
     titleCoffeeText: langData['title-coffee'],

@@ -25,9 +25,9 @@ const ModalChangeLanguage = ({ onSelectLanguage, languageData }) => {
               data-bs-dismiss="modal"
               aria-label="Close"></button>
           </div>
-          <div className="modal-body d-flex">
+          <div className="modal-body d-block mx-auto ">
             <button
-              className="btn btn-outline-light mx-auto"
+              className="btn btn-outline-light mx-2 my-2"
               name="btn-change-lang"
               onClick={() => handleLanguageChange('english')}
               onPress={() => handleLanguageChange('english')}>
@@ -35,12 +35,28 @@ const ModalChangeLanguage = ({ onSelectLanguage, languageData }) => {
               <span className="ps-1">English</span>
             </button>
             <button
-              className="btn btn-outline-light mx-auto"
+              className="btn btn-outline-light mx-2 my-2"
               name="btn-change-lang"
               onClick={() => handleLanguageChange('russian')}
               onPress={() => handleLanguageChange('russian')}>
               <i className="fa fa-flag" aria-hidden="true"></i>
               <span className="ps-1">Russian</span>
+            </button>
+            <button
+              className="btn btn-outline-light mx-2 my-2"
+              name="btn-change-lang"
+              onClick={() => handleLanguageChange('chinese')}
+              onPress={() => handleLanguageChange('chinese')}>
+              <i className="fa fa-flag" aria-hidden="true"></i>
+              <span className="ps-1">Chinese</span>
+            </button>
+            <button
+              className="btn btn-outline-light mx-2 my-2"
+              name="btn-change-lang"
+              onClick={() => handleLanguageChange('japanese')}
+              onPress={() => handleLanguageChange('japanese')}>
+              <i className="fa fa-flag" aria-hidden="true"></i>
+              <span className="ps-1">Japanese</span>
             </button>
           </div>
         </div>

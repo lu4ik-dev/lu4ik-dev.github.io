@@ -93,10 +93,10 @@ const Slide1 = ({ languageData }) => {
         contactButtonElement.textContent = languageData.buttonsText['btn-contact'];
       }
       if (buttonAboutElement) {
-        buttonAboutElement.textContent = languageData.buttonsText;
+        buttonAboutElement.textContent = languageData.buttonsText['btn-about-me'];
       }
       if (buttonSecondaryElement) {
-        buttonSecondaryElement.textContent = languageData.buttonsText;
+        buttonSecondaryElement.textContent = languageData.buttonsText['btn-secondary'];
       }
     }, 400);
   }, [languageData]);
