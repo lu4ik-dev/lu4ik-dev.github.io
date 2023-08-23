@@ -88,15 +88,15 @@ const Slide1 = ({ languageData }) => {
       if (textDescriptionElement) {
         textDescriptionElement.textContent = languageData.greetingDescription;
       }
-      console.log(languageData.buttonsText);
+      console.log(languageData);
       if (contactButtonElement) {
-        contactButtonElement.textContent = languageData.buttonsText.btnContactLabel;
+        contactButtonElement.textContent = languageData.buttonsText['btn-contact'];
       }
       if (buttonAboutElement) {
-        buttonAboutElement.textContent = languageData.btn.btn;
+        buttonAboutElement.textContent = languageData.buttonsText;
       }
       if (buttonSecondaryElement) {
-        buttonSecondaryElement.textContent = languageData.buttonsText.btnContactLabel;
+        buttonSecondaryElement.textContent = languageData.buttonsText;
       }
     }, 400);
   }, [languageData]);

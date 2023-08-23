@@ -2,11 +2,11 @@
     "russian": {
       "greet": "Привет",
       "complectName": "Дмитрий Смирнов",
-      "btn":{
+      "btn": [{
         "btn-contact": "Контакты",
         "btn-about-me": "Обо мне",
         "btn-secondary": "Коффи?"
-      },
+      }],
       "select-lang": "Выберите Ваш язык",
       "about-me": "dev this webpage",
       "skills-title": "Знания и навыки",
@@ -20,11 +20,11 @@
     "english": {
       "greet": "hi",
       "complectName": "Dmitriy Smirnov",
-      "btn":{
+      "btn": [{
         "btn-contact": "Contact",
         "btn-about-me": "About me?",
         "btn-secondary": "Coffee?"
-      },
+      }],
       "select-lang": "Select your language",
       "about-me": "dev this page",
       "skills-title": "Skills & Experience",
