@@ -15,7 +15,7 @@ function App() {
     complectNameText: '',
     skillsTitleText: '',
     selectLangLabel: '',
-    btnContactLabel: '',
+    buttonsText: '',
     greetingTitle: '',
     greetingDescription: '',
     titleCoffeeText: '',

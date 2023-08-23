@@ -74,6 +74,8 @@ const Slide1 = ({ languageData }) => {
     const complectNameElement = complectNameRef.current;
     const textDescriptionElement = textDescriptionRef.current;
     const contactButtonElement = contactButtonRef.current;
+    const buttonAboutElement = buttonAboutRef.current;
+    const buttonSecondaryElement = buttonSecondaryRef.current;
 
     setTimeout(() => {
       setIsTextVisible(true);
@@ -86,8 +88,15 @@ const Slide1 = ({ languageData }) => {
       if (textDescriptionElement) {
         textDescriptionElement.textContent = languageData.greetingDescription;
       }
+      console.log(languageData.buttonsText);
       if (contactButtonElement) {
-        contactButtonElement.textContent = languageData.btnContactLabel;
+        contactButtonElement.textContent = languageData.buttonsText.btnContactLabel;
+      }
+      if (buttonAboutElement) {
+        buttonAboutElement.textContent = languageData.btn.btn;
+      }
+      if (buttonSecondaryElement) {
+        buttonSecondaryElement.textContent = languageData.buttonsText.btnContactLabel;
       }
     }, 400);
   }, [languageData]);
