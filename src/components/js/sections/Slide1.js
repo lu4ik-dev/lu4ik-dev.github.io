@@ -9,6 +9,8 @@ const jsonUrl =
 
 const Slide1 = ({ languageData }) => {
   const [isCoffeeClicking, setIsCoffeeClicking] = useState(false);
+  const [isTextVisible, setIsTextVisible] = useState(true);
+
   function getRandomItem(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
@@ -61,15 +63,19 @@ const Slide1 = ({ languageData }) => {
   const complectNameRef = useRef(null);
 
   useEffect(() => {
+    setIsTextVisible(false);
     const greetingTitleElement = greetingTitleRef.current;
     const complectNameElement = complectNameRef.current;
 
-    if (greetingTitleElement) {
-      SpanTitles(languageData.greetingTitle, greetingTitleElement);
-    }
-    if (complectNameElement) {
-      SpanTitles(languageData.complectNameText, complectNameElement);
-    }
+    setTimeout(() => {
+      setIsTextVisible(true);
+      if (greetingTitleElement) {
+        SpanTitles(languageData.greetingTitle, greetingTitleElement);
+      }
+      if (complectNameElement) {
+        SpanTitles(languageData.complectNameText, complectNameElement);
+      }
+    }, 600);
   }, [languageData]);
   return (
     <header class="bg-gradient-start vh-100">
@@ -116,12 +122,20 @@ const Slide1 = ({ languageData }) => {
       <div class="container pt-5">
         <div class="row align-items-center mb-5">
           <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0">
-            <h1 class="display-4 text-light fw-bold mb-5 fs-1" ref={greetingTitleRef}></h1>
-            <p class="lead text-light mb-5" data-config-id="desc">
+            <h1
+              className={`display-4 text-light fw-bold mb-5 fs-1 ${
+                isTextVisible ? 'visible-change-language' : 'hidden-change-language'
+              }`}
+              ref={greetingTitleRef}></h1>
+            <p
+              className={`lead text-light mb-5 ${
+                isTextVisible ? 'visible-change-language' : 'hidden-change-language'
+              }`}
+              data-config-id="desc">
               {languageData.greetingDescription}
             </p>
             <div class="d-flex flex-wrap">
-              <a class="btn btn-primary me-2 mb-2 mb-sm-0" href="#">
+              <a class="btn btn-outline-light me-2 mb-2 mb-sm-0" href="#">
                 About me?
               </a>
               <button
@@ -129,7 +143,7 @@ const Slide1 = ({ languageData }) => {
                 href="#"
                 onClick={handleGetRandomFacts}
                 disabled={isCoffeeClicking}>
-                coffee
+                Сoffee?
               </button>
             </div>
           </div>

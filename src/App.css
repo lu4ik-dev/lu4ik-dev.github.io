@@ -82,7 +82,7 @@ h1 span {
 }
 h1 span:hover {
     cursor: pointer;
-    color: gold;
+    color: rgb(255,0,255);
     transition: all .5s ease-out;
     animation: shrink .6s ease-out;
   }
@@ -92,7 +92,7 @@ h1 span:hover {
 
 @keyframes shrink {
     0% {
-        color: gold;
+        color: rgb(255,0,255);
         transform: scale(1); 
       }
       35% {
@@ -132,7 +132,7 @@ h1 span:hover {
 }
 
 .logo-img:hover{
-  background-color: gold;
+  background-color: rgb(255,0,255);
   animation: shrink 0.6s ease-out;
 }
 
