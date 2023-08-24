@@ -29,13 +29,16 @@ const Slide3 = ({ languageData }) => {
   return (
     <div class="bg-gradient-third py-5 vh-100">
       <div class="container px-5">
-        <div class="row gx-5 align-items-center justify-content-center">
-          <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}></h1>
-          <div className="container">
+        <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}></h1>
+        <div className="container">
+          {dataSkills.map((skillsInfo, index) => (
             <div className="box">
               <div className="shadow" />
               <div className="content">
-                <div className="percent" data-text="HTML" style={{ '--num': 85 }}>
+                <div
+                  className="percent"
+                  data-text={skillsInfo.shortText}
+                  style={{ '--num': skillsInfo.progress }}>
                   <div className="dot" />
                   <svg>
                     <circle cx={70} cy={70} r={70} />
@@ -44,12 +47,13 @@ const Slide3 = ({ languageData }) => {
                 </div>
                 <div className="number">
                   <h2>
-                    85<span>%</span>
+                    {skillsInfo.progress}
+                    <span>%</span>
                   </h2>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
           <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
             <FullpageContext.Consumer>
               {(ctx) => (
