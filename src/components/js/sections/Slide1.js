@@ -4,7 +4,7 @@ import ImageComputer from '../../images/computer';
 import '../../css/slide1.css';
 import RandomFacts from '../randomFacts';
 import { fetchAndParseJSON } from '../changeLanguage';
-import Fullpage, { FullpageContext } from '@ap.cx/react-fullpage';
+import { FullpageContext } from '@ap.cx/react-fullpage';
 
 const jsonUrl =
   'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/randomFacts.json';
@@ -31,7 +31,6 @@ const Slide1 = ({ languageData }) => {
     const progress = document.querySelector('.progress');
     const title = document.getElementById('titleRandomFactsElement');
     const description = document.getElementById('descriptionRandomFactsElement');
-    console.log(`${languageData.titleCoffeeText}; ${text}`);
     toast.classList.add('active');
     progress.classList.add('active');
     setIsCoffeeClicking(true);
@@ -63,7 +62,6 @@ const Slide1 = ({ languageData }) => {
 
   const greetingTitleRef = useRef(null);
   const complectNameRef = useRef(null);
-  const contactButtonRef = useRef(null);
   const textDescriptionRef = useRef(null);
   const buttonAboutRef = useRef(null);
   const buttonSecondaryRef = useRef(null);
@@ -73,7 +71,6 @@ const Slide1 = ({ languageData }) => {
     const greetingTitleElement = greetingTitleRef.current;
     const complectNameElement = complectNameRef.current;
     const textDescriptionElement = textDescriptionRef.current;
-    const contactButtonElement = contactButtonRef.current;
     const buttonAboutElement = buttonAboutRef.current;
     const buttonSecondaryElement = buttonSecondaryRef.current;
 
@@ -88,10 +85,7 @@ const Slide1 = ({ languageData }) => {
       if (textDescriptionElement) {
         textDescriptionElement.textContent = languageData.greetingDescription;
       }
-      console.log(languageData);
-      if (contactButtonElement) {
-        contactButtonElement.textContent = languageData.buttonsText['btn-contact'];
-      }
+
       if (buttonAboutElement) {
         buttonAboutElement.textContent = languageData.buttonsText['btn-about-me'];
       }
@@ -130,28 +124,22 @@ const Slide1 = ({ languageData }) => {
               <span>v</span>
             </h1>
           </a>
-          <a
-            className={`mx-2 py-2 my-auto btn btn-outline-light fw-bolder  ${
-              isTextVisible ? 'visible-change-language' : 'hidden-change-language'
-            }`}
-            href="#"
-            id="btn-contact"
-            ref={contactButtonRef}></a>
+
           <button
             type="button"
-            class="btn btn-outline-light "
+            class="mx-2 py-2 my-auto btn btn-outline-light "
             data-bs-toggle="modal"
             data-bs-target="#modal-dialog-change-language">
             <i class="fs-4 mx-2 my-auto fa fa-language" aria-hidden="true"></i>
           </button>
         </div>
-        <div class="py-5 end-0 ">
+        <div class="position-relative py-5 end-0" style={{ zIndex: 9999 }}>
           <RandomFacts />
         </div>
       </div>
 
-      <div class="container pt-5">
-        <div class="row align-items-center mb-5">
+      <div class="container pt-5 ">
+        <div class="row align-items-center mb-5 pt-5">
           <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0">
             <h1
               className={`display-4 text-light fw-bold mb-5 fs-1 ${
@@ -173,9 +161,7 @@ const Slide1 = ({ languageData }) => {
                     }`}
                     ref={buttonAboutRef}
                     onClick={() => ctx.goto(ctx.slides[1], true)}
-                    onPress={() => ctx.goto(ctx.slides[1], true)}>
-                    About me?
-                  </a>
+                    onPress={() => ctx.goto(ctx.slides[1], true)}></a>
                 )}
               </FullpageContext.Consumer>
 
@@ -185,19 +171,27 @@ const Slide1 = ({ languageData }) => {
                 }`}
                 onClick={handleGetRandomFacts}
                 disabled={isCoffeeClicking}
-                ref={buttonSecondaryRef}>
-                Сoffee?
-              </button>
+                ref={buttonSecondaryRef}></button>
             </div>
           </div>
-          <div class="col-12 col-lg-6 offset-lg-1">
-            <div>
+          <div class="col-12 col-lg-6 offset-lg-1 mx-auto">
+            <div class="">
               <ImageComputer />
             </div>
           </div>
         </div>
         <div class="text-center d-none d-lg-block"></div>
       </div>
+
+      <di1v class="position-absolute w-100 my-5">
+        <div class="container-fluid ms-1 opacity-hover-effect fs-3">
+          <a
+            href="https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+            class="text-decoration-none fw-normal text-white-50">
+            <i data-bs-toggle="tooltip" title="Github" class="fab fa-github"></i>
+          </a>
+        </div>
+      </di1v>
     </header>
   );
 };

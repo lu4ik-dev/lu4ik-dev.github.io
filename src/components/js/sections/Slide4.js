@@ -1,15 +1,33 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchAndParseJSON } from '../changeLanguage';
 import '../../css/slide4.css';
+import '../../scss/slide4.scss';
 
 const Slide4 = ({ languageData }) => {
   const [dataProjects, setDataProjects] = useState([]);
-  const containerProjectsElement = useRef(null);
   const jsonUrl =
     'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/projects.json';
 
-  console.log(dataProjects);
   useEffect(() => {
+    const buttonsWrapper = document.querySelector('.map');
+    const slides = document.querySelector('.inner');
+
+    buttonsWrapper.addEventListener('click', (e) => {
+      if (e.target.nodeName === 'BUTTON') {
+        Array.from(buttonsWrapper.children).forEach((item) => item.classList.remove('active'));
+        if (e.target.classList.contains('first')) {
+          slides.style.transform = 'translateX(-0%)';
+          e.target.classList.add('active');
+        } else if (e.target.classList.contains('second')) {
+          slides.style.transform = 'translateX(-33.33333333333333%)';
+          e.target.classList.add('active');
+        } else if (e.target.classList.contains('third')) {
+          slides.style.transform = 'translatex(-66.6666666667%)';
+          e.target.classList.add('active');
+        }
+      }
+    });
+
     const fetchData = async () => {
       const projectsData = await fetchAndParseJSON(jsonUrl);
       setDataProjects(projectsData);
@@ -20,57 +38,50 @@ const Slide4 = ({ languageData }) => {
   const selectedLanguage = localStorage.getItem('LSLanguage');
   return (
     <div class="bg-gradient-fourth py-5 vh-100">
-      <div class="container px-5">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-          <div class="carousel-inner">
-            <div class="item carousel-item active">
-              <div class="row">
-                {''}
-                {dataProjects.map((projectInfo, index) => (
-                  <div class="col-sm-3">
-                    <div class="thumb-wrapper">
-                      <span class="wish-icon">
-                        <i class="fa fa-heart-o"></i>
-                      </span>
-                      <div class="img-box">
-                        <img src={projectInfo.image} class="img-fluid" alt="" />
-                      </div>
-                      <div class="thumb-content">
-                        <h4>{projectInfo[selectedLanguage].title}</h4>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item">
-                              <i class="fa fa-star"></i>
-                            </li>
-
-                            <li class="list-inline-item">
-                              <i class="fa fa-star-o"></i>
-                            </li>
-                          </ul>
-                        </div>
-                        <p class="item-price">
-                          <b>{projectInfo[selectedLanguage].subTitle}</b>
-                        </p>
-                        <a href={projectInfo.github} class="btn btn-outline-secondary">
-                          Link Github
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-                {''}
+      <div className="center">
+        <div className="wrapper">
+          <div className="inner">
+            {''}
+            {dataProjects.map((projectInfo, index) => (
+              <div className="card-projects">
+                <img src={projectInfo.image} alt={projectInfo[selectedLanguage].title} />
+                <div className="content">
+                  <h1>{projectInfo[selectedLanguage].title}</h1>
+                  <h3>{projectInfo[selectedLanguage].subTitle}</h3>
+                  <a class="btn btn-outline-secondary mb-2 mb-sm-0" href={projectInfo.github}>
+                    link github
+                  </a>
+                </div>
               </div>
-            </div>
+            ))}
+            {''}
           </div>
-          <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-          </a>
+        </div>
+        <div className="map">
+          <button className="active first" />
+          <button className="second" />
+          <button className="third" />
         </div>
       </div>
     </div>
+    /* <div class="bg-gradient-fourth py-5 vh-100">
+      <div class="row">
+        {''}
+        {dataProjects.map((projectInfo, index) => (
+          <div class="carousel">
+            <div class="carousel--wrap">
+              <div class="carousel--item">
+                <figure>
+                  <img src={projectInfo.image} class="img-fluid" alt="" />
+                </figure>
+                <h2>{projectInfo[selectedLanguage].title}</h2>
+              </div>
+            </div>
+          </div>
+        ))}
+        {''}
+      </div>
+        </div> */
   );
 };
 export default Slide4;

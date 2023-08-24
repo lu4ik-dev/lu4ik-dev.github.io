@@ -7,7 +7,7 @@ function ImageComputer() {
   };
 
   return (
-    <div>
+    <div className="my-auto mx-auto px-auto py-auto">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

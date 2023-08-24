@@ -3,12 +3,14 @@
 }
 
 @font-face {
-    font-family: Caudex-Regular;
-    src: url('components/font/Caudex-Regular.ttf');
+  font-family: Caudex-Regular;
+  src: url('components/font/Caudex-Regular.ttf');
+  font-family: Comfortaa-Regular;
+  src: url('components/font/Comfortaa-Regular.ttf');
 }
 body, html {
+   font-family: Comfortaa-Regular;
     background-color: #212121;
-
 	  height: 100%;
     margin: 0;
     padding: 0;
@@ -222,9 +224,44 @@ body{
 .fab.fa-github:hover{
   color: #8c4caf;
 }
+@media (max-width: 992px){
+  #decorationLaptop{
+    padding-bottom: 10vh!important;
+  }
+}
+@media (max-width: 500px){
+  #decorationLaptop{
+    padding-bottom: 5vh!important;
+    padding-right: 50vw!important;
+  }
+}
+@media (max-width: 320px){
+  #decorationLaptop{
+    padding-bottom: 5vh!important;
+    padding-right: 100vw!important;
+  }
+}
+@media (max-width: 270px){
+  #decorationLaptop{
+    padding-bottom: 5vh!important;
+    padding-right: 150vw!important;
+  }
+}
 
-@media (max-width: 768px) {
 
+@media (max-width: 768px) { /* mobile - ipad */
+  .btn .btn-outline-light {
+    font-size: 10pt!important;
+  }
+  .overlay-right-side{
+  opacity: 1!important;
+  }
+ .opacity-hover-effect{
+  opacity: 1!important;
+ }
+   #decorationLaptop{
+      padding-right: 10vw;
+    }
   .fab.fa-js{
     color:gold;
   }

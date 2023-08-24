@@ -1,16 +1,11 @@
 import React, { useContext } from 'react';
-import Fullpage, {
-  FullPageSections,
-  FullpageSection,
-  FullpageContext,
-} from '@ap.cx/react-fullpage';
-import OverlayRightScroll, { changeStyle } from './overlayRightScroll';
+import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpage';
 import FullpageNavigation from './slideNavigation';
 
 const FpScroll = ({ content }) => {
   return (
     <div>
-      <Fullpage transitionTiming={1200} onChange={console.log('slide changed')}>
+      <Fullpage transitionTiming={1200}>
         <FullpageNavigation />
         <FullPageSections>
           {content.map((sectionContent, index) => (
