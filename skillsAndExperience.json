@@ -1,0 +1,27 @@
+[
+    {
+      "styleIcon": "fab fa-js",
+      "progress": 85,
+      "longText": "Java Script",
+      "shortText": "JS"
+    },
+    {
+      "styleIcon": "fab fa-html5",
+      "progress": 55,
+      "longText": "HTML",
+      "shortText": "HTML"
+    },
+    {
+      "styleIcon": "fab fa-git",
+      "progress": 35,
+      "longText": "Git",
+      "shortText": "Git"
+    },
+    {
+      "styleIcon": "fab fa-windows",
+      "progress": 59,
+      "longText": "Windows",
+      "shortText": "Win"
+    }
+  ]
+  
