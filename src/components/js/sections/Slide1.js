@@ -184,13 +184,11 @@ const Slide1 = ({ languageData }) => {
       </div>
 
       <di1v class="position-absolute w-100 my-5">
-        <div class="container-fluid ms-1 opacity-hover-effect fs-3">
-          <a
-            href="https://github.com/lu4ik-dev/lu4ik-dev.github.io"
-            class="text-decoration-none fw-normal text-white-50">
-            <i data-bs-toggle="tooltip" title="Github" class="fab fa-github"></i>
-          </a>
-        </div>
+        <a
+          href="https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+          class="text-decoration-none fw-normal ms-3 text-white-50 fs-2">
+          <i data-bs-toggle="tooltip" title="Github" class="fab fa-github"></i>
+        </a>
       </di1v>
     </header>
   );
