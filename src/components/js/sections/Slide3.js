@@ -31,27 +31,30 @@ const Slide3 = ({ languageData }) => {
     <div class="bg-gradient-third py-5 vh-100">
       <div class="container px-5">
         <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}></h1>
-        <div class="row ">
-          <div className="container-icons">
+        eto ne reliz
+        <div className="container-icons ">
+          <div class="row justify-content-sm-center justify-content-xl-start">
             {dataSkills.map((skillsInfo, index) => (
-              <div class="card" style={{ '--num': skillsInfo.progress }}>
-                <div class="box">
-                  <div class="percent">
-                    <svg>
-                      <circle cx="70" cy="70" r="70"></circle>
-                      <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number">
-                      <h2>
-                        <i
-                          data-bs-toggle="tooltip"
-                          title="Java Script"
-                          className={skillsInfo.styleIcon}></i>
-                      </h2>
+              <div class="col">
+                <div class="card" style={{ '--num': skillsInfo.progress }}>
+                  <div class="box">
+                    <div class="percent">
+                      <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                      </svg>
+                      <div class="number">
+                        <h2>
+                          <i
+                            data-bs-toggle="tooltip"
+                            title="Java Script"
+                            className={skillsInfo.styleIcon}></i>
+                        </h2>
+                      </div>
                     </div>
+                    <h2 class="text">{skillsInfo.longText}</h2>
+                    <h2 class="text">{skillsInfo.progress}%</h2>
                   </div>
-                  <h2 class="text">{skillsInfo.longText}</h2>
-                  <h2 class="text">{skillsInfo.progress}%</h2>
                 </div>
               </div>
             ))}
