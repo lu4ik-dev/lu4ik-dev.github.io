@@ -6,6 +6,10 @@ function ImageComputer() {
     console.log('SVG clicked!');
   };
 
+  const handleSvgReload = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="my-auto mx-auto px-auto py-auto">
       <svg
@@ -5087,6 +5091,7 @@ function ImageComputer() {
                               fillOpacity="1"
                               fillRule="nonzero"
                               stroke="none"
+                              onClick={handleSvgReload}
                               d="M0 0l-8.488 4.901c-.508.292-1.336.292-1.84 0l-2.52-1.463c-.504-.293-.501-.774.006-1.067l8.489-4.9c.507-.293 1.336-.293 1.84 0L.006-1.065C.51-.772.507-.293 0 0"></path>
                           </g>
                         </g>

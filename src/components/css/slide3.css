@@ -1,205 +1,285 @@
 .bg-gradient-third{
-    background-color:  #212121;
-    background-image:
-    radial-gradient(at 74% 83%, hsla(236,63%,77%, .1) 0px, transparent 50%),
-    radial-gradient(at 98% 10%, hsla(244,82%,60%, .1) 0px, transparent 50%),
-    radial-gradient(at 90% 69%, hsla(340,74%,63%, .1) 0px, transparent 50%),
-    radial-gradient(at 5% 5%, hsla(65,96%,77%, .1) 0px, transparent 50%),
-    radial-gradient(at 46% 31%, hsla(184,63%,75%, .1) 0px, transparent 50%),
-    radial-gradient(at 66% 35%, hsla(349,80%,66%, .1) 0px, transparent 50%),
-    radial-gradient(at 6% 58%, hsla(244,91%,60%, .1) 0px, transparent 50%),
-    radial-gradient(at 45% 61%, hsla(233,90%,69%, .1) 0px, transparent 50%),
-    radial-gradient(at 93% 10%, hsla(218,98%,74%, .1) 0px, transparent 50%),
-    radial-gradient(at 65% 68%, hsla(190,99%,64%, .1) 0px, transparent 50%);
-  }
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  background-color:  #212121;
+  background-image:
+  radial-gradient(at 74% 83%, hsla(236,63%,77%, .1) 0px, transparent 50%),
+  radial-gradient(at 98% 10%, hsla(244,82%,60%, .1) 0px, transparent 50%),
+  radial-gradient(at 90% 69%, hsla(340,74%,63%, .1) 0px, transparent 50%),
+  radial-gradient(at 5% 5%, hsla(65,96%,77%, .1) 0px, transparent 50%),
+  radial-gradient(at 46% 31%, hsla(184,63%,75%, .1) 0px, transparent 50%),
+  radial-gradient(at 66% 35%, hsla(349,80%,66%, .1) 0px, transparent 50%),
+  radial-gradient(at 6% 58%, hsla(244,91%,60%, .1) 0px, transparent 50%),
+  radial-gradient(at 45% 61%, hsla(233,90%,69%, .1) 0px, transparent 50%),
+  radial-gradient(at 93% 10%, hsla(218,98%,74%, .1) 0px, transparent 50%),
+  radial-gradient(at 65% 68%, hsla(190,99%,64%, .1) 0px, transparent 50%);
 }
 
-
-
-.box {
+.container-icons
+{
   position: relative;
-  width: 240px;
-  height: 250px;
-  margin-left: 5rem;
-  display: inline-flex;
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+}
+.container-icons .card
+{
+  border: 0px;
+  position: relative;
+  width: 250px;
+  background: transparent;
   justify-content: center;
   align-items: center;
+  height: 300px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
 }
-
-.box::before {
+.container-icons .card:hover
+{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+.container-icons .card::before
+{
   content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.percent
+{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+  background: #222;
+  z-index: 1000;
+}
+.percent .number
+{
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 100%;
-  background: linear-gradient(#fff, #fff, #e3e3e3);
-  filter: blur(1px);
-  z-index: 1;
-}
-
-.box::after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  right: -1px;
-  width: 20px;
-  height: 100%;
-  background: #9d9d9d;
-  filter: blur(1px);
-  z-index: 1;
-}
-
-.box .shadow {
-  position: absolute;
   width: 100%;
   height: 100%;
-  background: #eee;
-}
-
-.box .shadow::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: calc(100% + 5px);
-  width: 100%;
-  height: 200%;
-  background: linear-gradient(rgba(0,0,0,0.075), transparent);
-  transform: skewX(45deg);
-}
-
-.box .shadow::after {
-  content: '';
-  position: absolute;
-  bottom: -200%;
-  left: calc(100% + 15px);
-  width: 100%;
-  height: 200%;
-  background: linear-gradient(rgba(0,0,0,0.075), transparent);
-  transform: skewX(45deg);
-}
-
-.box .content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#dbdae1, #a3aaba);
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.1),
-    15px 15px 15px rgba(0,0,0,0.1),
-    20px 20px 20px rgba(0,0,0,0.1),
-    50px 50px 50px rgba(0,0,0,0.1),
-    inset 3px 3px 2px #fff;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.box .content .percent {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-
-.box .content .percent::before {
-  content: attr(data-text);
-  position: absolute;
-  inset: 20px;
-  background: #555;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.percent .number h2
+{
+  color: #777;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+.card:hover .percent .number h2
+{
   color: #fff;
-  font-size: 1.75rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
 }
-
-.box .content .percent svg {
+.percent .number h2 span
+{
+  font-size: 24px;
+  color: #777;
+}
+.card:hover .percent .number h2 span
+{
+  color: #fff;
+}
+.text
+{
   position: relative;
-  width: 150px;
-  height: 150px;
-  transform: rotate(270deg);
+  color: #777;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.card:hover .text
+{
+  color: #fff;
 }
 
-.box .content .percent svg circle {
+svg circle
+{
   width: 100%;
   height: 100%;
-  fill: transparent;
-  stroke-width: 3;
-  stroke: rgba(0,0,0,0.05);
-  transform: translate(5px, 5px);
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+ stroke-dasharray: 440;
+ stroke-dashoffset: 440; 
 }
 
-.box .content .percent svg circle:nth-child(2) {
-  stroke: #555;
-  stroke-dasharray: 440;
+.card:nth-child(1n) svg circle:nth-child(2)
+{
   stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
-  opacity: 0;
-  animation: fadeIn 1s linear forwards;
-  animation-delay: 2.5s;
+  stroke: #ff04f7;
+}    
+
+
+
+.percent:hover .fab.fa-js{
+  color:gold;
 }
 
-@keyframes fadeIn {
+.percent:hover .fab.fa-html5{
+  background: linear-gradient(90deg, rgba(228,77,38,1) 49%, rgba(241,101,41,1) 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.percent:hover .fab.fa-css3-alt{
+  background: linear-gradient(90deg, rgba(38,77,228,1) 49%, rgba(41,101,241,1) 49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.percent:hover .fab.fa-php{
+  color: #787cb4;
+}
+
+.percent:hover .fab.fa-node-js{
+  color: #8CCA48;
+}
+
+.percent:hover .fab.fa-windows{
+  color: #13bbf7;
+}
+.percent:hover .fab.fa-linux{
+  color: #333;
+  background-image: url('../images/linux.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.percent:hover .fab.fa-python{
+  
+  background: linear-gradient(-45deg, rgba(255, 222, 88) 49%, rgba(56,115,164,1) 49%);
+  background-image: url('../images/py.png');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.percent:hover .fa-solid.fa-database{
+  background: linear-gradient(180deg, rgb(228, 222, 38) 0%, rgb(228, 111, 38) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.percent:hover .fab.fa-git{
+  color: #f15135;
+}
+
+.fab.fa-github:hover{
+  color: #8c4caf;
+}
+
+@media (max-width: 767px) {
+
+  .fab.fa-js{
+    color:gold;
+  }
+  
+  .fab.fa-html5{
+    background: linear-gradient(90deg, rgba(228,77,38,1) 49%, rgba(241,101,41,1) 49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .fab.fa-css3-alt{
+    background: linear-gradient(90deg, rgba(38,77,228,1) 49%, rgba(41,101,241,1) 49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .fab.fa-php{
+    color: #787cb4;
+  }
+  
+  .fab.fa-node-js{
+    color: #8CCA48;
+  }
+  
+  .fab.fa-windows{
+    color: #13bbf7;
+  }
+  .fab.fa-linux{
+    color: #333;
+    background-image: url('../images/linux.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .fab.fa-python{
+    
+    background: linear-gradient(-45deg, rgba(255, 222, 88) 49%, rgba(56,115,164,1) 49%);
+    background-image: url('../images/py.png');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+  }
+  
+  .fa-solid.fa-database{
+    background: linear-gradient(180deg, rgb(228, 222, 38) 0%, rgb(228, 111, 38) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fab.fa-git{
+    color: #f15135;
+  }
+  
+  .fab.fa-github{
+    color: #8c4caf;
+  }
+}
+
+.percent:hover .fab{
+  transition: all .5s ease-out;
+  animation: shrinkXY .6s ease-out, jumping .6s ease-out;
+}
+
+
+@keyframes shrinkXY {
   0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+      transform: scale(1); 
+    }
+    35% {
+      transform: scale(0.6); 
+    }
+    50% {
+      transform: scale(1.2);  
+    }
+    70% {
+      transform: scale(0.9); 
+    }
+    85% {
+      transform: scale(1.15); 
+    }
+    100% {
+      transform: scale(1); 
+    }
 }
 
-.box .content .percent .dot {
-  position: absolute;
-  inset: 5px;
-  z-index: 10;
-  animation: animateDot 2s linear forwards;
-}
 
-@keyframes animateDot {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(calc(3.6deg * var(--num)));
-  }
-}
-
-.box .content .percent .dot::before {
-  content: '';
-  position: absolute;
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 14px;
-  height: 14px;
-  background: #555;
-  border-radius: 50%;
-}
-
-.box .content .number {
-  position: relative;
-  inset: 0;
-  opacity: 0;
-  animation: fadeIn 1s linear forwards;
-  animation-delay: 2.5s;
-}
-
-.box .content .number h2 {
-  font-size: 2.5rem;
-  color: #555;
-}
-
-.box .content .number h2 span {
-  font-weight: 300;
-  font-size: 1.5rem;
+.percent:hover .fa-solid{
+  transition: all .5s ease-out;
+  animation: shrinkXY .6s ease-out;
 }

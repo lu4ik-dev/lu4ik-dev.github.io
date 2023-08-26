@@ -138,14 +138,16 @@ h1 span:hover {
   animation: shrink 0.6s ease-out;
 }
 
-.logo-add-text{
+.logo-add-text div span{
   font-family: Caudex-Regular;
 }
 
 .nav-link{
   border-right: 1px solid #dfdfdf;
 }
-
+.nav-item{
+ cursor: default;
+}
 .scroll-line{
   position: absolute;
   height: 55px;
@@ -363,7 +365,7 @@ body{
   right: 30px;
   border-radius: 12px;
   background-color: #262c31;
-  padding: 20px 35px 20px 25px;
+  padding: 5px 5px 15px 15px;
   box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transform: translateX(calc(100% + 30px));
@@ -385,7 +387,7 @@ body{
 }
 .toast .toast-content i:hover{
   transition: all .3s ease-out;
-  background-color: rgb(158, 31, 158);
+  color: rgb(158, 31, 158);
 }
 
 .toast .toast-content i:not(:hover){
@@ -401,9 +403,9 @@ body{
 }
 
 .message .text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  color: #b6b6b6;
+  color: #d6d6d6;
 }
 
 .message .text.text-1 {
@@ -412,6 +414,7 @@ body{
 }
 
 .toast .close {
+  color: #777;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -448,7 +451,7 @@ body{
 }
 
 .progress.active:before {
-  animation: progress 5s linear forwards;
+  animation: progress 10s linear forwards;
 }
 
 @keyframes progress {

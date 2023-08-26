@@ -11,7 +11,11 @@ const overlayRightScroll = () => {
           <li class="nav-item">
             <FullpageContext.Consumer>
               {(ctx) => (
-                <a class="nav-link text-white fs-4" onClick={() => ctx.goto(ctx.slides[0], true)}>
+                <a
+                  class="nav-link text-white fs-4"
+                  onClick={() => {
+                    ctx.goto(ctx.slides[0], true);
+                  }}>
                   1
                 </a>
               )}
@@ -20,7 +24,12 @@ const overlayRightScroll = () => {
           <li class="nav-item">
             <FullpageContext.Consumer>
               {(ctx) => (
-                <a class="nav-link text-white fs-4" onClick={() => ctx.goto(ctx.slides[1], true)}>
+                <a
+                  class="nav-link text-white fs-4"
+                  onClick={() => {
+                    alert('Link clicked!');
+                    ctx.goto(ctx.slides[1], true);
+                  }}>
                   2
                 </a>
               )}

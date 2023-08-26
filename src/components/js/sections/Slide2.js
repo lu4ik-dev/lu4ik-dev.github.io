@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import SpanTitles from '../SpanTitles';
 import '../../css/slide2.css';
 import Fullpage, { FullpageContext } from '@ap.cx/react-fullpage';
+import { scrollBarChangePosition } from '../supports';
+
 const Slide2 = ({ languageData }) => {
   const aboutMeTitleRef = useRef(null);
   const aboutMeDescriptionRef = useRef(null);
@@ -28,8 +30,14 @@ const Slide2 = ({ languageData }) => {
                   {(ctx) => (
                     <a
                       class="btn btn-outline-light btn-lg px-4 me-sm-3"
-                      onClick={() => ctx.goto(ctx.slides[2], true)}
-                      onPress={() => ctx.goto(ctx.slides[2], true)}>
+                      onClick={() => {
+                        scrollBarChangePosition(2);
+                        // ctx.goto(ctx.slides[2], true);
+                      }}
+                      onPress={() => {
+                        scrollBarChangePosition(2);
+                        // ctx.goto(ctx.slides[2], true);
+                      }}>
                       Development stack
                     </a>
                   )}
@@ -38,8 +46,14 @@ const Slide2 = ({ languageData }) => {
                   {(ctx) => (
                     <a
                       class="btn btn-outline-light btn-lg px-4"
-                      onClick={() => ctx.goto(ctx.slides[3], true)}
-                      onPress={() => ctx.goto(ctx.slides[3], true)}>
+                      onClick={() => {
+                        scrollBarChangePosition(3);
+                        //    ctx.goto(ctx.slides[3], true);
+                      }}
+                      onPress={() => {
+                        scrollBarChangePosition(3);
+                        //  ctx.goto(ctx.slides[3], true);
+                      }}>
                       Works
                     </a>
                   )}
@@ -47,8 +61,12 @@ const Slide2 = ({ languageData }) => {
               </div>
             </div>
           </div>
-          <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-            <div></div>
+          <div class="col-xl-5 col-xxl-6  d-xl-block text-center">
+            <div>
+              <h4 className={` text-light mb-5 `} data-config-id="desc">
+                {languageData.greetingDescription}
+              </h4>
+            </div>
           </div>
         </div>
       </div>

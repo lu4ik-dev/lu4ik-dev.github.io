@@ -5,7 +5,7 @@ import '../../css/slide1.css';
 import RandomFacts from '../randomFacts';
 import { fetchAndParseJSON } from '../changeLanguage';
 import { FullpageContext } from '@ap.cx/react-fullpage';
-
+import { scrollBarChangePosition } from '../supports';
 const jsonUrl =
   'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/randomFacts.json';
 
@@ -41,12 +41,12 @@ const Slide1 = ({ languageData }) => {
     const timer1 = setTimeout(() => {
       toast.classList.remove('active');
       setIsCoffeeClicking(false);
-    }, 5000);
+    }, 10000);
 
     const timer2 = setTimeout(() => {
       progress.classList.remove('active');
       setIsCoffeeClicking(false);
-    }, 5300);
+    }, 10300);
 
     const closeIcon = document.querySelector('.close');
     closeIcon.addEventListener('click', () => {
@@ -83,7 +83,7 @@ const Slide1 = ({ languageData }) => {
         SpanTitles(languageData.complectNameText, complectNameElement);
       }
       if (textDescriptionElement) {
-        textDescriptionElement.textContent = languageData.greetingDescription;
+        //    textDescriptionElement.textContent = languageData.greetingDescription;
       }
 
       if (buttonAboutElement) {
@@ -146,24 +146,25 @@ const Slide1 = ({ languageData }) => {
                 isTextVisible ? 'visible-change-language' : 'hidden-change-language'
               }`}
               ref={greetingTitleRef}></h1>
-            <h4
-              className={` text-light mb-5 ${
-                isTextVisible ? 'visible-change-language' : 'hidden-change-language'
-              }`}
-              data-config-id="desc"
-              ref={textDescriptionRef}></h4>
+
             <div class="d-flex flex-wrap">
-              <FullpageContext.Consumer>
+              {/* <FullpageContext.Consumer>
                 {(ctx) => (
                   <a
                     className={`btn btn-outline-light me-2 mb-2 mb-sm-0  ${
                       isTextVisible ? 'visible-change-language' : 'hidden-change-language'
                     }`}
                     ref={buttonAboutRef}
-                    onClick={() => ctx.goto(ctx.slides[1], true)}
-                    onPress={() => ctx.goto(ctx.slides[1], true)}></a>
+                    onClick={() => {
+                      scrollBarChangePosition(1);
+                      //      ctx.goto(ctx.slides[1], true);
+                    }}
+                    onPress={() => {
+                      scrollBarChangePosition(1);
+                      //    ctx.goto(ctx.slides[1], true);
+                    }}></a>
                 )}
-              </FullpageContext.Consumer>
+                  </FullpageContext.Consumer> */}
 
               <button
                 className={`btn btn-outline-secondary mb-2 mb-sm-0  ${
@@ -183,13 +184,14 @@ const Slide1 = ({ languageData }) => {
         <div class="text-center d-none d-lg-block"></div>
       </div>
 
-      <di1v class="position-absolute w-100 my-5">
+      <div class="position-absolute w-100 my-5">
         <a
           href="https://github.com/lu4ik-dev/lu4ik-dev.github.io"
           class="text-decoration-none fw-normal ms-3 text-white-50 fs-2">
           <i data-bs-toggle="tooltip" title="Github" class="fab fa-github"></i>
         </a>
-      </di1v>
+        <span class="scroll-mouse"></span>
+      </div>
     </header>
   );
 };

@@ -1,14 +1,8 @@
-/* eslint-disable react/static-property-placement */
-/**
- * @class FullpageNavigation
- */
-// eslint-disable-next-line react/react-in-jsx-scope
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { FullpageContext } from '@ap.cx/react-fullpage';
+import { scrollBarChangePosition } from './supports';
 
-// TODO: do navigation
-// eslint-disable-next-line react/prefer-stateless-function
 class FullpageNavigation extends PureComponent {
   static contextType = FullpageContext;
 
@@ -31,7 +25,8 @@ class FullpageNavigation extends PureComponent {
   render() {
     const { number, slides } = this.context;
 
-    const gotoSlide = (slide) => {
+    const gotoSlide = (slide, i) => {
+      scrollBarChangePosition(i);
       const { goto } = this.context;
       goto(slide);
     };
@@ -51,8 +46,8 @@ class FullpageNavigation extends PureComponent {
 
                   <div
                     className="nav-item"
-                    onClick={() => gotoSlide(slide)}
-                    onPress={() => gotoSlide(slide)}
+                    //  onClick={() => gotoSlide(slide, i)}
+                    //  onPress={() => gotoSlide(slide, i)}
                     role="button"
                     tabIndex="-1"
                     aria-label={`Slide ${i}`}>

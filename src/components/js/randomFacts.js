@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const RandomFacts = () => {
   return (
-    <div class="toast  show">
+    <div class="toast show">
       <div class="toast-content">
         <i class="fas fa-coffee fs-4"></i>
 
