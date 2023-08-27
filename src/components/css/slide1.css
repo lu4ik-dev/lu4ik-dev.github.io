@@ -207,3 +207,33 @@ fill: rgb(123, 78, 179);
     top: 80%;
   }
 }
+
+
+@keyframes scrollUpMouse {
+  0%{
+    top: 80%;
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    top: 20%;
+  }
+}
+
+@media (max-width: 980px) {
+  .scroll-mouse{
+    border-radius: 5px;
+  }
+      
+ .scroll-mouse:after{
+  content: '●';
+  animation: scrollUpMouse 1.5s ease infinite;
+
+ }
+}

@@ -13,128 +13,112 @@
   radial-gradient(at 65% 68%, hsla(190,99%,64%, .1) 0px, transparent 50%);
 }
 
-.container-icons
-{
-  position: relative;
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
+
+.skill-bars{
+  padding: 1vh 1vw;
+  width: 30em; 
+  height: 400px;
+  border-radius: 10px;
 }
-.container-icons .card
-{
-  border: 0px;
-  position: relative;
-  width: auto;
-  max-width: 200px;
-  background: transparent;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 1em;
-  margin: 2em;
-  border-radius: 4px;
-  text-align: center;
-  overflow: hidden;
-  transition: 0.5s;
+
+.bar:first-child{
+  margin-top: 0px;
 }
-.container-icons .card:hover
-{
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+.info{
+  margin-bottom: 5px;
 }
-.container-icons .card::before
-{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50%;
+.info span{
+  font-weight: 500;
+  font-size: 17px; opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line{
+  height: 10px; 
   width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-.percent
-{
+  background: #ffffff10;
   position: relative;
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 50px #000;
-  background: #222;
-  z-index: 1000;
+  transform: scaleX(0); 
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
 }
-.percent .number
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
+.progress-line span{
+  text-align: none;
+  height: 100%; position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+	background: linear-gradient(-45deg, #ee52ee, #e73c7e, #23a6d5, #00fff2);
+	background-size: 500% 500%;
+	transform: translate3d(0, 0, 0);
+  box-shadow: inset 3px 1px 5px rgba(0, 0, 0, 0.5);
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards,
+             gradientAnimateBar 5s ease-out infinite;
 }
-.percent .number h2
-{
-  color: #777;
-  font-weight: 700;
-  font-size: 30px;
-  transition: 0.5s;
+
+@keyframes gradientAnimateBar {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
-.card:hover .percent .number h2
-{
-  color: #fff;
+
+.progress-line span div{
+  opacity: 0;
+  text-align: right;
+  font-size: 10px;
+  margin-top: -2px;
+  margin-right: 5px;
+  font-weight: bold;
+  transition: all .4s ease-out;
 }
-.percent .number h2 span
-{
-  font-size: 24px;
-  color: #777;
+
+.progress-line:hover span div{
+  opacity: 1;
 }
-.card:hover .percent .number h2 span
-{
-  color: #fff;
+.progress-line:not(:hover) span div{
+  opacity: 0;
 }
-.text
-{
-  position: relative;
-  color: #777;
-  margin-top: 20px;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: 0.5s;
-}
-.card:hover .text
-{
-  color: #fff;
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
 }
 
 
-svg circle
-{
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: #191919;
-  stroke-width: 5;
-  stroke-linecap: round;
-  transform: translate(5px,5px) scale(40%);
+
+@media screen and (max-width:900px){
+
+  .skill-bars{
+  padding: 15px 20px;
+  width: 60vw; 
+
+  border-radius: 10px;
+  }
 }
-svg circle:nth-child(2)
-{
- stroke-dasharray: 440;
- stroke-dashoffset: 440; 
+@media screen and (max-width :600px) {
+
+  .skill-bars{
+    padding: 10px 10px;
+    width: 60vw; 
+
+    border-radius: 8px;
+  
+  }
+  
 }
-
-.card:nth-child(1n) svg circle:nth-child(2)
-{
-  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
-  stroke: #ff04f7;
-}    
-
-
 
 .percent:hover .fab.fa-js{
   color:gold;
