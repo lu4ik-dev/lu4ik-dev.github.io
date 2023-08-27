@@ -29,7 +29,7 @@
     radial-gradient(at 52% 45%, hsla(242, 100%, 70%, 0.918) 0px, transparent 50%);
     height: 70vmin;
     transition: all .5s ease-out;
-    transform: scale(110%);
+    transform: scale(120%);
 }
 
 
@@ -39,6 +39,11 @@
   }
   
   .keyboard-hover-element:hover {
+    transform: translateY(1px);
+    fill: #ffff00;
+  }
+  .keyboard-hover-element:active {
+    transform: translateY(-1px);
     fill: #ffff00;
   }
 
@@ -63,8 +68,13 @@
     fill: rgb(100, 10, 209);
 }
 .keyboard-hover-arrow-element:hover{
-fill: #ff6600;
-}
+  transform: translateY(1px);
+  fill: #ff6600;
+  }
+  .keyboard-hover-arrow-element:active{
+    transform: translateY(-1px);
+    fill: #ff6600;
+    }
 .keyboard-hover-arrow-element:not(:hover){
 fill: rgb(100, 10, 209);
 }
@@ -76,7 +86,6 @@ fill: rgb(100, 10, 209);
 }
 .circular-digram-pink:hover{
     fill: #ff00ff;
-    animation: animateHeart .7s linear infinite;
 
 }
 .circular-digram-pink:not(:hover){
@@ -118,7 +127,7 @@ transform: scale(1) translateY(1px);
     fill: rgb(123, 78, 179);
   }
   .screen-element-question-mark:hover{
-    fill: #ff00ff;
+    fill: #ff00ff60;
     animation: animateHeart .7s linear infinite;
 
   }
@@ -132,7 +141,7 @@ transform: scale(1) translateY(1px);
   fill:rgb(123, 78, 179);
 }
 .screen-element-code-left:hover{
-  fill: #ff00ff;
+  fill: #ff00ff60;
   animation: animateHeart .7s linear infinite;
 }
 .screen-element-code-left:not(:hover){
@@ -144,7 +153,7 @@ transform: scale(1) translateY(1px);
   fill: rgb(123, 78, 179);
 }
 .screen-element-code-bottom:hover{
-  fill: #ff00ff;
+  fill: #ff00ff60;
   animation: animateHeart .7s linear infinite;
 }
 .screen-element-code-bottom:not(:hover){
