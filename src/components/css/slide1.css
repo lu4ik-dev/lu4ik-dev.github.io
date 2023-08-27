@@ -234,6 +234,5 @@ fill: rgb(123, 78, 179);
  .scroll-mouse:after{
   content: '●';
   animation: scrollUpMouse 1.5s ease infinite;
-
  }
 }
