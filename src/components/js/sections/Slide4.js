@@ -5,32 +5,29 @@ import '../../scss/slide4.scss';
 
 const Slide4 = ({ languageData }) => {
   const [dataProjects, setDataProjects] = useState([]);
+  const [slideTrans, setSlideTrans] = useState([]);
+
   const jsonUrl =
     'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/projects.json';
 
   useEffect(() => {
     const buttonsWrapper = document.querySelector('.map');
-    const slides = document.querySelector('.inner');
-
-    buttonsWrapper.addEventListener('click', (e) => {
-      if (e.target.nodeName === 'BUTTON') {
-        Array.from(buttonsWrapper.children).forEach((item) => item.classList.remove('active'));
-        if (e.target.classList.contains('first')) {
-          slides.style.transform = 'translateX(-0%)';
-          e.target.classList.add('active');
-        } else if (e.target.classList.contains('second')) {
-          slides.style.transform = 'translateX(-33.33333333333333%)';
-          e.target.classList.add('active');
-        } else if (e.target.classList.contains('third')) {
-          slides.style.transform = 'translatex(-66.6666666667%)';
-          e.target.classList.add('active');
-        }
-      }
-    });
+    const slides = document.getElementById('slidesContainerForProjects');
 
     const fetchData = async () => {
       const projectsData = await fetchAndParseJSON(jsonUrl);
       setDataProjects(projectsData);
+      let a = getComputedStyle(slides).width;
+      const countOfProjects = projectsData.length;
+      buttonsWrapper.addEventListener('click', (e) => {
+        if (e.target.nodeName === 'BUTTON') {
+          Array.from(buttonsWrapper.children).forEach((item) => item.classList.remove('active'));
+          let targetKey = e.target.getAttribute('data-id');
+          e.target.classList.add('active');
+          let slideTrans = targetKey !== 0 ? targetKey * (countOfProjects * 2) : 0;
+          setSlideTrans(slideTrans);
+        }
+      });
     };
 
     fetchData();
@@ -40,7 +37,10 @@ const Slide4 = ({ languageData }) => {
     <div class="bg-gradient-fourth py-5 vh-100">
       <div className="center">
         <div className="wrapper">
-          <div className="inner">
+          <div
+            className="inner"
+            id="slidesContainerForProjects"
+            style={{ transform: `translateX(-${slideTrans}%)` }}>
             {''}
             {dataProjects.map((projectInfo, index) => (
               <div className="card-projects">
@@ -58,9 +58,21 @@ const Slide4 = ({ languageData }) => {
           </div>
         </div>
         <div className="map">
-          <button className="active first" />
-          <button className="second" />
-          <button className="third" />
+          {dataProjects.map((projectInfo, index) =>
+            index === 1 ? (
+              <button
+                key={index}
+                data-id={index}
+                className={'active point-of-slides-project button-' + index}
+              />
+            ) : (
+              <button
+                key={index}
+                data-id={index}
+                className={'point-of-slides-project button-' + index}
+              />
+            ),
+          )}
         </div>
       </div>
     </div>

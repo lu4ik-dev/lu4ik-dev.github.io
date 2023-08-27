@@ -24,14 +24,32 @@
 .bar:first-child{
   margin-top: 0px;
 }
+
+.bar:hover {
+  transition: all .6s ease-out;
+  transform: scale(1.05);
+}
+.bar:not(:hover) {
+  transition: all .3s ease-in;
+  transform: scale(1);
+}
+
+.bar:hover .progress-line span div{
+  opacity: 1;
+}
+.bar:not(:hover) .progress-line span div{
+  opacity: 0;
+}
+
 .info{
   margin-bottom: 5px;
 }
 .info span{
-  font-weight: 500;
+  font-weight: bold;
   font-size: 17px; opacity: 0;
   animation: showText 0.5s 1s linear forwards;
 }
+
 @keyframes showText {
   100%{
     opacity: 1;
@@ -84,12 +102,7 @@
   transition: all .4s ease-out;
 }
 
-.progress-line:hover span div{
-  opacity: 1;
-}
-.progress-line:not(:hover) span div{
-  opacity: 0;
-}
+
 
 @keyframes animate {
   100%{
@@ -102,16 +115,15 @@
 @media screen and (max-width:900px){
 
   .skill-bars{
-  padding: 15px 20px;
+  padding-top: 0;
   width: 60vw; 
-
   border-radius: 10px;
   }
 }
 @media screen and (max-width :600px) {
 
   .skill-bars{
-    padding: 10px 10px;
+    padding: 0px 10px;
     width: 60vw; 
 
     border-radius: 8px;

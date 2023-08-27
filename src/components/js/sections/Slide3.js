@@ -24,40 +24,79 @@ const Slide3 = ({ languageData }) => {
     };
     fetchData();
   }, [languageData]);
+  const screenWidth = window.innerWidth;
+  console.log(screenWidth);
 
-  return (
-    <div class="bg-gradient-third py-5 vh-100">
-      <div class="container px-5">
-        <div class="row gx-5 align-items-center justify-content-center">
-          <div class="col-lg-8 col-xl-7 col-xxl-6">
-            <div class="my-5  text-xl-start">
-              <div class="skill-bars">
-                {dataSkills.map((skillsInfo, index) => (
-                  <div class="bar">
-                    <div class="info text-secondary">
-                      <span>{skillsInfo.longText}</span>
+  if (screenWidth > 1200) {
+    return (
+      <div class="bg-gradient-third py-5 vh-100">
+        <div class="container px-5">
+          <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+              <div class="my-5  text-xl-start">
+                <div class="skill-bars">
+                  {dataSkills.map((skillsInfo, index) => (
+                    <div class="bar">
+                      <div class="info text-secondary">
+                        <span>{skillsInfo.longText}</span>
+                      </div>
+                      <div class="progress-line" style={{ width: '100%' }}>
+                        <span style={{ width: skillsInfo.progress + '%' }}>
+                          <div class="text-light">{skillsInfo.progress}%</div>
+                        </span>
+                      </div>
                     </div>
-                    <div class="progress-line" style={{ width: '100%' }}>
-                      <span style={{ width: skillsInfo.progress + '%' }}>
-                        <div class="text-light">{skillsInfo.progress}%</div>
-                      </span>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xl-5 col-xxl-6  d-xl-block text-center">
-            <div>
-              <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}></h1>
-              <h4 className={` text-light mb-5 `} data-config-id="desc">
-                хуй знает мб чот напишу а мб удалю этот подзаголовок
-              </h4>
+            <div class="col-xl-5 col-xxl-6  d-xl-block text-center">
+              <div>
+                <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}></h1>
+                <h4 className={` text-light mb-5 `} data-config-id="desc">
+                  хуй знает мб чот напишу а мб удалю этот подзаголовок
+                </h4>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div class="bg-gradient-third py-5 vh-100">
+        <div class="container px-5">
+          <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+              <div class="text-center">
+                <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}></h1>
+                <h4 className={` text-light mb-5 `} data-config-id="desc">
+                  1
+                </h4>
+              </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6  d-xl-block ">
+              <div class="my-5  text-xl-start">
+                <div class="skill-bars">
+                  {dataSkills.map((skillsInfo, index) => (
+                    <div class="bar">
+                      <div class="info text-secondary">
+                        <span>{skillsInfo.longText}</span>
+                      </div>
+                      <div class="progress-line" style={{ width: '100%' }}>
+                        <span style={{ width: skillsInfo.progress + '%' }}>
+                          <div class="text-light">{skillsInfo.progress}%</div>
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 };
 export default Slide3;

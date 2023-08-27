@@ -29,7 +29,6 @@ body, html {
 }
 
 .main-info{
- 
     width: 100vw;
     height: 100vh;
     left: 0;
@@ -80,17 +79,19 @@ body, html {
 }
 
 h1 span {
+    transition: all .5s ease-out;
     display: inline-block;
 }
 h1 span:hover {
-    cursor: pointer;
+    cursor: default;
     color: rgb(255,0,255);
-    transition: all .5s ease-out;
     animation: shrink .6s ease-out;
   }
-
-
   
+  h1 span:not(:hover) {
+    cursor: default;
+    transform: scale(1);
+  }
 
 @keyframes shrink {
     0% {
@@ -112,7 +113,6 @@ h1 span:hover {
       100% {
         transform: scale(1); 
       }
-    
 }
 
 

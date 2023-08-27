@@ -184,10 +184,8 @@ const Slide1 = ({ languageData }) => {
         <div class="text-center d-none d-lg-block"></div>
       </div>
 
-      <div class="position-absolute w-100 my-5">
-        <a
-          href="https://github.com/lu4ik-dev/lu4ik-dev.github.io"
-          class="text-decoration-none fw-normal ms-3 text-white-50 fs-2">
+      <div class="position-absolute w-100 my-5 bottom-mobile">
+        <a href="https://github.com/lu4ik-dev/lu4ik-dev.github.io" class="ms-3 text-white-50 fs-2">
           <i data-bs-toggle="tooltip" title="Github" class="fab fa-github"></i>
         </a>
         <span class="scroll-mouse"></span>

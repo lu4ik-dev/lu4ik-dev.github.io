@@ -227,12 +227,20 @@ fill: rgb(123, 78, 179);
 }
 
 @media (max-width: 980px) {
+
   .scroll-mouse{
     border-radius: 5px;
   }
       
  .scroll-mouse:after{
+  left: 1.5em;
   content: '●';
   animation: scrollUpMouse 1.5s ease infinite;
  }
+}
+
+@media (max-height: 667px) {
+  .scroll-mouse{
+    bottom: 8vh;
+  }
 }
