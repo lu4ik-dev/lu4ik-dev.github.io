@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import bootstrap from '../node_modules/bootstrap/dist/js/bootstrap.min';
 import Sections from './components/js/sections';
 import ModalChangeLanguage from './components/js/modalChangeLanguage';
 import { fetchAndParseJSON, changeLanguage } from './components/js/changeLanguage';
 import ModalFirstStart from './components/js/modalFirstStart';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
-
+import Projects from './components/js/Projects';
 const jsonUrl =
   'https://raw.githubusercontent.com/lu4ik-dev/lu4ik-dev.github.io/main/languages.json';
 
@@ -25,7 +26,7 @@ function App() {
 
   useEffect(() => {
     const storedLanguage = localStorage.getItem('LSLanguage');
-    if (storedLanguage == 'russian' || storedLanguage == 'english') {
+    if (storedLanguage === 'russian' || storedLanguage === 'english') {
       handleLanguageChange(storedLanguage);
     } else {
       localStorage.setItem('LSLanguage', 'english');
@@ -41,12 +42,23 @@ function App() {
     }
   };
 
+  const MainPage = () => {
+    return (
+      <>
+        <ModalFirstStart languageData={languageData} />
+        <ModalChangeLanguage onSelectLanguage={handleLanguageChange} languageData={languageData} />
+        <Sections languageData={languageData} />
+      </>
+    );
+  };
+
   return (
-    <div>
-      <ModalFirstStart languageData={languageData} />
-      <ModalChangeLanguage onSelectLanguage={handleLanguageChange} languageData={languageData} />
-      <Sections languageData={languageData} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

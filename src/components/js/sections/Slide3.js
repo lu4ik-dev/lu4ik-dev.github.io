@@ -25,7 +25,6 @@ const Slide3 = ({ languageData }) => {
     fetchData();
   }, [languageData]);
   const screenWidth = window.innerWidth;
-  console.log(screenWidth);
 
   if (screenWidth > 1200) {
     return (
