@@ -3,7 +3,6 @@ import SpanTitles from '../SpanTitles';
 import '../../css/slide2.css';
 import Fullpage, { FullpageContext } from '@ap.cx/react-fullpage';
 import { scrollBarChangePosition } from '../supports';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 const Slide2 = ({ languageData }) => {
   const aboutMeTitleRef = useRef(null);
@@ -17,7 +16,6 @@ const Slide2 = ({ languageData }) => {
       SpanTitles(languageData.complectNameText, aboutMeTitleElement);
     }
   }, [languageData]);
-  const navigate = useNavigate();
 
   return (
     <div class="bg-gradient-second py-5 vh-100">
@@ -44,17 +42,27 @@ const Slide2 = ({ languageData }) => {
                     </a>
                   )}
                 </FullpageContext.Consumer>
-
-                <button
-                  class="btn btn-outline-light btn-lg px-4"
-                  onClick={() => navigate('projects', { replace: false })}>
-                  Work
-                </button>
+                <FullpageContext.Consumer>
+                  {(ctx) => (
+                    <a
+                      class="btn btn-outline-light btn-lg px-4"
+                      onClick={() => {
+                        scrollBarChangePosition(3);
+                        //    ctx.goto(ctx.slides[3], true);
+                      }}
+                      onPress={() => {
+                        scrollBarChangePosition(3);
+                        //  ctx.goto(ctx.slides[3], true);
+                      }}>
+                      Works
+                    </a>
+                  )}
+                </FullpageContext.Consumer>
               </div>
             </div>
           </div>
-          <div class="col-xl-5 col-xxl-6  d-xl-block text-center">
-            <div>
+          <div name="ну и зачем ты сюда залез?" class="col-xl-5 col-xxl-6  d-xl-block text-center">
+            <div name="ладно если уж сюда залезь отправь мне скрин, посмотрим сколько вас таких">
               <h4 className={` text-light mb-5 `} data-config-id="desc">
                 {languageData.greetingDescription}
               </h4>
