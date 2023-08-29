@@ -53,8 +53,8 @@ const Slide2 = ({ languageData }) => {
               </div>
             </div>
           </div>
-          <div name="ну и зачем ты сюда залез?" class="col-xl-5 col-xxl-6  d-xl-block text-center">
-            <div name="ладно если уж сюда залезь отправь мне скрин, посмотрим сколько вас таких">
+          <div class="col-xl-5 col-xxl-6  d-xl-block text-center">
+            <div>
               <h4 className={` text-light mb-5 `} data-config-id="desc">
                 {languageData.greetingDescription}
               </h4>
