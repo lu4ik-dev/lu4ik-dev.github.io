@@ -37,11 +37,10 @@ const Slide3 = ({ languageData }) => {
                   {dataSkills.map((skillsInfo, index) => (
                     <div class="bar">
                       <div class="info text-secondary">
-                        <span>{skillsInfo.longText}</span>
+                        <span>{skillsInfo.longText}</span><span> {skillsInfo.progress}%</span>
                       </div>
                       <div class="progress-line" style={{ width: '100%' }}>
                         <span style={{ width: skillsInfo.progress + '%' }}>
-                          <div class="text-light">{skillsInfo.progress}%</div>
                         </span>
                       </div>
                     </div>
@@ -53,7 +52,7 @@ const Slide3 = ({ languageData }) => {
               <div>
                 <h1 class="display-5 fw-bolder text-white mb-2" ref={skillsTitleLabelRef}></h1>
                 <h4 className={` text-light mb-5 `} data-config-id="desc">
-                  хуй знает мб чот напишу а мб удалю этот подзаголовок
+                  Description
                 </h4>
               </div>
             </div>
@@ -80,7 +79,7 @@ const Slide3 = ({ languageData }) => {
                   {dataSkills.map((skillsInfo, index) => (
                     <div class="bar">
                       <div class="info text-secondary">
-                        <span>{skillsInfo.longText}</span>
+                      <span>{skillsInfo.longText}</span>
                       </div>
                       <div class="progress-line" style={{ width: '100%' }}>
                         <span style={{ width: skillsInfo.progress + '%' }}>

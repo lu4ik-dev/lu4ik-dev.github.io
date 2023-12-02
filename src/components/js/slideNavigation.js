@@ -43,7 +43,6 @@ class FullpageNavigation extends PureComponent {
                     style={{
                       display: number === i ? 'flex' : 'none',
                     }}></div>
-
                   <div
                     className="nav-item"
                     //  onClick={() => gotoSlide(slide, i)}

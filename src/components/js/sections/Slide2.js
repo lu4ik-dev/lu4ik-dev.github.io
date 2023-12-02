@@ -1,12 +1,56 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SpanTitles from '../SpanTitles';
 import '../../css/slide2.css';
 import Fullpage, { FullpageContext } from '@ap.cx/react-fullpage';
 import { scrollBarChangePosition } from '../supports';
 
 const Slide2 = ({ languageData }) => {
+
+  const [isCoffeeClicking, setIsCoffeeClicking] = useState(false);
   const aboutMeTitleRef = useRef(null);
   const aboutMeDescriptionRef = useRef(null);
+
+
+  const handleGetRandomFacts = async () => {
+      const msg = 'english' === localStorage.getItem('LSLanguage') ? "in dev" : "В разработке";
+      showToast(msg);
+    
+  };
+
+  const showToast = (text) => {
+    const toast = document.querySelector('.toast');
+    const progress = document.querySelector('.progress');
+    const title = document.getElementById('titleRandomFactsElement');
+    const description = document.getElementById('descriptionRandomFactsElement');
+    toast.classList.add('active');
+    progress.classList.add('active');
+    setIsCoffeeClicking(true);
+
+    title.textContent = languageData.titleCoffeeText;
+    description.textContent = text;
+
+    const timer1 = setTimeout(() => {
+      toast.classList.remove('active');
+      setIsCoffeeClicking(false);
+    }, 10000);
+
+    const timer2 = setTimeout(() => {
+      progress.classList.remove('active');
+      setIsCoffeeClicking(false);
+    }, 10300);
+
+    const closeIcon = document.querySelector('.close');
+    closeIcon.addEventListener('click', () => {
+      toast.classList.remove('active');
+      setTimeout(() => {
+        progress.classList.remove('active');
+        setIsCoffeeClicking(false);
+      }, 300);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    });
+  };
+
 
   useEffect(() => {
     const aboutMeTitleElement = aboutMeTitleRef.current;
@@ -29,14 +73,11 @@ const Slide2 = ({ languageData }) => {
                 <FullpageContext.Consumer>
                   {(ctx) => (
                     <a
-                      class="btn btn-outline-light btn-lg px-4 me-sm-3"
-                      onClick={() => {
-                        scrollBarChangePosition(2);
-                        // ctx.goto(ctx.slides[2], true);
+                      class="btn btn-outline-light btn-lg px-4 me-sm-3" 
+                      disabled="true"
+                      onClick={() => { 
                       }}
-                      onPress={() => {
-                        scrollBarChangePosition(2);
-                        // ctx.goto(ctx.slides[2], true);
+                      onPress={() => { 
                       }}>
                       Development stack
                     </a>
@@ -46,13 +87,10 @@ const Slide2 = ({ languageData }) => {
                   {(ctx) => (
                     <a
                       class="btn btn-outline-light btn-lg px-4"
-                      onClick={() => {
-                        scrollBarChangePosition(3);
-                        //    ctx.goto(ctx.slides[3], true);
+                      disabled="true"
+                      onClick={() => { 
                       }}
-                      onPress={() => {
-                        scrollBarChangePosition(3);
-                        //  ctx.goto(ctx.slides[3], true);
+                      onPress={() => { 
                       }}>
                       Works
                     </a>

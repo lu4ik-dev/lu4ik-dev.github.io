@@ -9,8 +9,8 @@ const Sections = ({ languageData }) => {
   const sectionContent = [
     <Slide1 languageData={languageData} />,
     <Slide2 languageData={languageData} />,
-    <Slide3 languageData={languageData} />,
-    <Slide4 languageData={languageData} />,
+  //  <Slide3 languageData={languageData} />,
+  //  <Slide4 languageData={languageData} />,
   ];
 
   return <FpScroll content={sectionContent} />;
