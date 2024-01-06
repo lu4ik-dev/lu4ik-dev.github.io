@@ -18,6 +18,7 @@
       "first-start-title": "Внимание! Это Бета-версия!",
 
       "modal-settings-snowfail": [{
+        "title": "Настройки снега",
         "snowflake-count": "Количество снежинок",
         "speed": "Скорость снежинок",
         "wind": "Скорость ветера",
@@ -45,6 +46,7 @@
       "first-start-title": "Attention! This is the Beta version!",
 
       "modal-settings-snowfail": [{
+        "title": "Settings Snowfail",
         "snowflake-count": "Number of Snowflakes",
         "speed": "Snowflake Speed",
         "wind": "Wind Speed",
