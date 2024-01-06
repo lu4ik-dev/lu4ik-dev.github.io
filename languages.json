@@ -14,8 +14,17 @@
       "greeting-title": "Привет! Я Full-Stack разработчик",
       "greeting-description": "Чота обо мне и может быть инфа о разных проектах.",
       "title-coffee": "Случайный факт от Коффи",
-      "first-start-text": "Внимание! Это Бета-версия Веб-Сайта \"Смирнов Дмитрий | Портфолио\", предназначенная для тестирования. Она не отображает финального качества продукта .Спасибо за понимание и поддержку .Удачи!",
-      "first-start-title": "Внимание! Это Бета-версия!"
+      "first-start-text": "Внимание! Это Бета-версия Веб-Сайта \"Смирнов Дмитрий | Портфолио\", предназначенная для тестирования. Она не отображает финальное качество продукта. Спасибо за понимание и поддержку. Удачи!",
+      "first-start-title": "Внимание! Это Бета-версия!",
+
+      "modal-settings-snowfail": [{
+        "snowflake-count": "Количество снежинок",
+        "speed": "Скорость снежинок",
+        "wind": "Скорость ветера",
+        "radius": "Размер",
+        "use-image": "Использовать картинку?",
+        "color": "Цвет"
+      }]
     },
     "english": {
       "greet": "hi",
@@ -33,6 +42,15 @@
       "greeting-description": "description about me. maybe here was info about pet projects",
       "title-coffee": "Random fact by Coffee",
       "first-start-text": "Attention! This is the Beta version of the website \"Dmitry Smirnov | Portfolio,\" intended for testing purposes. It does not reflect the final quality of the product. Thank you for your understanding and support. Good luck!",
-      "first-start-title": "Attention! This is the Beta version!"
+      "first-start-title": "Attention! This is the Beta version!",
+
+      "modal-settings-snowfail": [{
+        "snowflake-count": "Number of Snowflakes",
+        "speed": "Snowflake Speed",
+        "wind": "Wind Speed",
+        "radius": "Size",
+        "use-image": "Use Image?",
+        "color": "Color"
+    }]
     }
   }
