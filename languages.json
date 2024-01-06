@@ -25,6 +25,7 @@
         "radius": "Размер",
         "use-image": "Использовать картинку?",
         "color": "Цвет",
+        "rotation-speed": "Скорость вращения",
         "min": "Мин.",
         "max": "Макс."
       }]
@@ -55,6 +56,7 @@
         "radius": "Size",
         "use-image": "Use Image?",
         "color": "Color",
+        "rotation-speed": "Rotation speed",
         "min": "Min.",
         "max": "Max."
     }]
