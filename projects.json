@@ -1,0 +1,74 @@
+[
+  {
+    "image": "https://images.wallpaperscraft.ru/image/single/doroga_avtomobili_derevia_1012721_300x168.jpg",
+    "english": {
+      "title": "First card",
+      "subTitle": "desc First card."
+    },
+    "russian": {
+      "title": "Первый проект",
+      "subTitle": "Описание."
+    },
+    "github": "https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+  },
+  {
+    "image": "https://images.wallpaperscraft.ru/image/single/iahty_buhta_pirs_1012728_300x168.jpg",
+    "english": {
+      "title": "Second Card",
+      "subTitle": "desc second card."
+    },
+    "russian": {
+      "title": "Первый проект",
+      "subTitle": "Описание."
+    },
+    "github": "https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+  },
+  {
+    "image": "https://images.wallpaperscraft.ru/image/single/utki_ptitsy_prud_1012711_300x168.jpg",
+    "english": {
+      "title": "third card",
+      "subTitle": "third card."
+    },
+    "russian": {
+      "title": "Первый проект",
+      "subTitle": "Описание."
+    },
+    "github": "https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+  },
+  {
+    "image": "https://images.wallpaperscraft.ru/image/single/maiak_more_bliki_1012700_300x168.jpg",
+    "english": {
+      "title": "fourth card",
+      "subTitle": "desc fourth card."
+    },
+    "russian": {
+      "title": "Первый проект",
+      "subTitle": "Описание."
+    },
+    "github": "https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+  },
+  {
+    "image": "https://images.wallpaperscraft.ru/image/single/ehinatseia_fioletovyj_tsvetok_1012697_300x168.jpg",
+    "english": {
+      "title": "fifth card",
+      "subTitle": "fifth card."
+    },
+    "russian": {
+      "title": "Первый проект",
+      "subTitle": "Описание."
+    },
+    "github": "https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+  },
+  {
+    "image": "https://images.wallpaperscraft.ru/image/single/melnitsa_lopasti_trava_1012693_300x168.jpg",
+    "english": {
+      "title": "sixth card",
+      "subTitle": "sixth card."
+    },
+    "russian": {
+      "title": "Первый проект",
+      "subTitle": "Описание."
+    },
+    "github": "https://github.com/lu4ik-dev/lu4ik-dev.github.io"
+  }
+]
