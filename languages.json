@@ -1,0 +1,64 @@
+{
+    "russian": {
+      "greet": "Привет",
+      "complectName": "Дмитрий Смирнов",
+      "btn": [{
+        "btn-contact": "Контакты",
+        "btn-about-me": "Обо мне",
+        "btn-secondary": "Коффи?"
+      }],
+      "select-lang": "Выберите Ваш язык",
+      "about-me": "Меня зовут Дмитрий, мне 20 лет. Более двух лет я занимаюсь бэкенд-разработкой. Я закончил колледж, специализируясь на программировании. У меня есть опыт работы с React JS. Кроме веб-разработки, я интересуюсь разработкой настольных приложений на языке программирования C#. Я участвовал в проекте по автоматизации и сбору статистики для образовательных учреждений, где работал в качестве бэкенд-разработчика, используя стек технологий, включающий NodeJS, Express JS и MySQL. Кроме того, я принимал участие в различных хакатонах и программных соревнованиях.",
+      "skills-title": "Знания и навыки",
+      "skills-description": "ква ква ква ква",
+      "greeting-title": "Привет! Я Full-Stack разработчик",
+      "greeting-description": "Чота обо мне и может быть инфа о разных проектах.",
+      "title-coffee": "Случайный факт от Коффи",
+      "first-start-text": "Внимание! Это Бета-версия Веб-Сайта \"Смирнов Дмитрий | Портфолио\", предназначенная для тестирования. Она не отображает финальное качество продукта. Спасибо за понимание и поддержку. Удачи!",
+      "first-start-title": "Внимание! Это Бета-версия!",
+
+      "modal-settings-snowfail": [{
+        "title": "Настройки снега",
+        "snowflake-count": "Количество снежинок",
+        "speed": "Скорость снежинок",
+        "wind": "Скорость ветера",
+        "radius": "Размер",
+        "use-image": "Использовать картинку?",
+        "color": "Цвет",
+        "rotation-speed": "Скорость вращения",
+        "min": "Мин.",
+        "max": "Макс."
+      }]
+    },
+    "english": {
+      "greet": "hi",
+      "complectName": "Dmitriy Smirnov",
+      "btn": [{
+        "btn-contact": "Contact",
+        "btn-about-me": "About me?",
+        "btn-secondary": "Coffee?"
+      }],
+      "select-lang": "Select your language",
+      "about-me": "My name is Dmitriy, I am 20 years old. For over two year now I have been doing backend development. I completed my college education with a focus on programming. I have experience working with React JS. In addition to web development, I am interested in developing desktop applications using the C# programming language. I participated in a project aimed at automating and collecting statistics for educational institutions, where I worked as a backend developer using a stack that included NodeJS, Express JS, and MySQL. Additionally, I have taken part in various hackathons and programming competitions.",
+      "skills-title": "Skills & Experience",
+      "skills-description": "kva kva kva kva",
+      "greeting-title": "Hi! I'm Full-Stack developer!",
+      "greeting-description": "description about me. maybe here was info about pet projects",
+      "title-coffee": "Random fact by Coffee",
+      "first-start-text": "Attention! This is the Beta version of the website \"Dmitry Smirnov | Portfolio,\" intended for testing purposes. It does not reflect the final quality of the product. Thank you for your understanding and support. Good luck!",
+      "first-start-title": "Attention! This is the Beta version!",
+
+      "modal-settings-snowfail": [{
+        "title": "Settings Snowfail",
+        "snowflake-count": "Number of Snowflakes",
+        "speed": "Snowflake Speed",
+        "wind": "Wind Speed",
+        "radius": "Size",
+        "use-image": "Use Image?",
+        "color": "Color",
+        "rotation-speed": "Rotation speed",
+        "min": "Min.",
+        "max": "Max."
+    }]
+    }
+  }
